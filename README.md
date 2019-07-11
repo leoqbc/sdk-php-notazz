@@ -4,8 +4,12 @@ SDK em PHP para emissão de nota fiscal NFE e NFSE
 # Abaixo exemplo de uso
 ´´´php
 // Example NFE
+use Multiverse\Notazz\DSL\NotaFiscalBuilder;
+
+$notafiscal = new NotaFiscalBuilder();
+
 $result = 
-    $this->notafiscal
+    $notafiscal
         ->setRequestHandler($client)
         ->key('123')
         ->destination()
