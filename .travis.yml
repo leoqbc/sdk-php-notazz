@@ -19,4 +19,4 @@ before_script:
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
-  - vendor/bin/phpunit tests/
+  - vendor/bin/phpunit
