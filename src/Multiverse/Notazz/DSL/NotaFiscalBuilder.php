@@ -47,8 +47,11 @@ class NotaFiscalBuilder
 
     public function __call($method, $args)
     {
+        $arg = $args[0] ?? null;
+        
         $target = $this->current;
-        $this->$target->$method($args[0]);
+        
+        $this->$target->$method($arg);
 
         return $this;
     }
