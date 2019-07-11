@@ -7,60 +7,60 @@ class Document extends Resource
     /**
      * @var float
      */
-    protected $DOCUMENT_BASEVALUE;
+    protected $document_basevalue;
     /**
      * @var int
      */
-    protected $DOCUMENT_CNAE;
+    protected $document_cnae;
     /**
      * @var int
      */
-    protected $DOCUMENT_GOAL;
+    protected $document_goal;
     /**
      * @var int
      */
-    protected $DOCUMENT_REFERENCED;
+    protected $document_referenced;
     /**
      * @var int
      */
-    protected $DOCUMENT_OPERATION_TYPE;
+    protected $document_operation_type;
     /**
      * @var string
      */
-    protected $DOCUMENT_NATURE_OPERATION;
+    protected $document_nature_operation;
     /**
      * @var string
      */
-    protected $DOCUMENT_DESCRIPTION;
+    protected $document_description;
     /**
      * @var string
      */
-    protected $DOCUMENT_ISSUE_DATE;
+    protected $document_issue_date;
 
     public function __construct()
     {
         $date = date('Y-m-d H:i:s', strtotime('+30 days'));
         
-        $this->setDOCUMENT_ISSUE_DATE($date);    
+        $this->setDocumentIssueDate($date);
     }
 
     /**
      *
      * @return  float
      */
-    public function getDOCUMENT_BASEVALUE()
+    public function getDocumentBasevalue()
     {
-        return $this->DOCUMENT_BASEVALUE;
+        return $this->document_basevalue;
     }
 
     /**
      * Valor da nota fiscal
      *
-     * @param  float  $DOCUMENT_BASEVALUE
+     * @param  float  $document_basevalue
      */
-    public function setDOCUMENT_BASEVALUE(float $DOCUMENT_BASEVALUE)
+    public function setDocumentBasevalue(float $document_basevalue)
     {
-        $this->DOCUMENT_BASEVALUE = $DOCUMENT_BASEVALUE;
+        $this->document_basevalue = $document_basevalue;
     }
 
     /**
@@ -68,21 +68,21 @@ class Document extends Resource
      *
      * @return  int
      */
-    public function getDOCUMENT_CNAE()
+    public function getDocumentCnae()
     {
-        return $this->DOCUMENT_CNAE;
+        return $this->document_cnae;
     }
 
     /**
      * CNAE. Documentação: http://www.cnae.ibge.gov.br
      *
-     * @param  int  $DOCUMENT_CNAE
+     * @param  int  $document_cnae
      *
      * @return  self
      */
-    public function setDOCUMENT_CNAE(int $DOCUMENT_CNAE)
+    public function setDocumentCnae(int $document_cnae)
     {
-        $this->DOCUMENT_CNAE = $DOCUMENT_CNAE;
+        $this->document_cnae = $document_cnae;
 
         return $this;
     }
@@ -92,19 +92,19 @@ class Document extends Resource
      *
      * @return  int
      */
-    public function getDOCUMENT_GOAL()
+    public function getDocumentGoal()
     {
-        return $this->DOCUMENT_GOAL;
+        return $this->document_goal;
     }
 
     /**
      * Finalidade da Nota Fiscal. 1 = Normal, 2 = Complementar, 3 = Ajuste, 4 = Devolução/Retorno
      *
-     * @param  int  $DOCUMENT_GOAL
+     * @param  int  $document_goal
      */
-    public function setDOCUMENT_GOAL(int $DOCUMENT_GOAL)
+    public function setDocumentGoal(int $document_goal)
     {
-        $this->DOCUMENT_GOAL = $DOCUMENT_GOAL;
+        $this->document_goal = $document_goal;
     }
 
     /**
@@ -112,19 +112,19 @@ class Document extends Resource
      *
      * @return  int
      */
-    public function getDOCUMENT_REFERENCED()
+    public function getDocumentReferenced()
     {
-        return $this->DOCUMENT_REFERENCED;
+        return $this->document_referenced;
     }
 
     /**
      * Chave da nota fiscal referenciada. Utilizar quando DOCUMENT_GOAL for diferente de 1
      *
-     * @param  int  $DOCUMENT_REFERENCED
+     * @param  int  $document_referenced
      */
-    public function setDOCUMENT_REFERENCED(int $DOCUMENT_REFERENCED)
+    public function setDocumentReferenced(int $document_referenced)
     {
-        $this->DOCUMENT_REFERENCED = $DOCUMENT_REFERENCED;
+        $this->document_referenced = $document_referenced;
     }
 
     /**
@@ -132,19 +132,19 @@ class Document extends Resource
      *
      * @return  int
      */
-    public function getDOCUMENT_OPERATION_TYPE()
+    public function getDocumentOperationType()
     {
-        return $this->DOCUMENT_OPERATION_TYPE;
+        return $this->document_operation_type;
     }
 
     /**
      * Tipo de Operação. 0 = Entrada, 1 = Saída
      *
-     * @param  int  $DOCUMENT_OPERATION_TYPE
+     * @param  int  $document_operation_type
      */
-    public function setDOCUMENT_OPERATION_TYPE(int $DOCUMENT_OPERATION_TYPE)
+    public function setDocumentOperationType(int $document_operation_type)
     {
-        $this->DOCUMENT_OPERATION_TYPE = $DOCUMENT_OPERATION_TYPE;
+        $this->document_operation_type = $document_operation_type;
     }
 
     /**
@@ -152,19 +152,19 @@ class Document extends Resource
      *
      * @return  string
      */
-    public function getDOCUMENT_NATURE_OPERATION()
+    public function getDocumentNatureOperation()
     {
-        return $this->DOCUMENT_NATURE_OPERATION;
+        return $this->document_nature_operation;
     }
 
     /**
      * Natureza da operação da nota fiscal
      *
-     * @param  string  $DOCUMENT_NATURE_OPERATION
+     * @param  string  $document_nature_operation
      */
-    public function setDOCUMENT_NATURE_OPERATION(string $DOCUMENT_NATURE_OPERATION)
+    public function setDocumentNatureOperation(string $document_nature_operation)
     {
-        $this->DOCUMENT_NATURE_OPERATION = $DOCUMENT_NATURE_OPERATION;
+        $this->document_nature_operation = $document_nature_operation;
     }
 
     /**
@@ -172,19 +172,19 @@ class Document extends Resource
      *
      * @return  string
      */
-    public function getDOCUMENT_DESCRIPTION()
+    public function getDocumentDescription()
     {
-        return $this->DOCUMENT_DESCRIPTION;
+        return $this->document_description;
     }
 
     /**
      * Descrição da nota fiscal
      *
-     * @param  string  $DOCUMENT_DESCRIPTION
+     * @param  string  $document_description
      */
-    public function setDOCUMENT_DESCRIPTION(string $DOCUMENT_DESCRIPTION)
+    public function setDocumentDescription(string $document_description)
     {
-        $this->DOCUMENT_DESCRIPTION = $DOCUMENT_DESCRIPTION;
+        $this->document_description = $document_description;
     }
 
     /**
@@ -192,19 +192,19 @@ class Document extends Resource
      *
      * @return  string
      */
-    public function getDOCUMENT_ISSUE_DATE()
+    public function getDocumentIssueDate()
     {
-        return $this->DOCUMENT_ISSUE_DATE;
+        return $this->document_issue_date;
     }
 
     /**
      * Data de emissão automática da nota fiscal (por padrão é a data atual) formato YYYY-mm-dd HH:ii:ss
-     * 
-     * @param  string  $DOCUMENT_ISSUE_DATE
+     *
+     * @param  string  $document_issue_date
      *
      */
-    public function setDOCUMENT_ISSUE_DATE(string $DOCUMENT_ISSUE_DATE)
+    public function setDocumentIssueDate(string $document_issue_date)
     {
-        $this->DOCUMENT_ISSUE_DATE = $DOCUMENT_ISSUE_DATE;
+        $this->document_issue_date = $document_issue_date;
     }
 }

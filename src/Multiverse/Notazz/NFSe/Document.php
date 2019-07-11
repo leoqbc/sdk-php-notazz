@@ -7,130 +7,129 @@ class Document extends Resource
     /**
      * @var float
      */
-    protected $DOCUMENT_BASEVALUE;
+    protected $document_basevalue;
     /**
      * @var string
      */
-    protected $DOCUMENT_DESCRIPTION;
+    protected $document_description;
     /**
      * @var string
      */
-    protected $DOCUMENT_COMPETENCE;
+    protected $document_competence;
     /**
      * @var int
      */
-    protected $DOCUMENT_CNAE;
+    protected $document_cnae;
     /**
      * @var string
      */
-    protected $DOCUMENT_ISSUE_DATE;
+    protected $document_issue_date;
 
     public function __construct()
     {
-        $date = date('Y-m-d H:i:s', strtotime('+30 days'));
         $currentDate = date('Y-m-d H:i:s');
-        $this->setDOCUMENT_ISSUE_DATE($date);    
-        $this->setDOCUMENT_COMPETENCE($currentDate);    
+        $this->setDocumentIssueDate($currentDate);
+        $this->setDocumentCompetence($currentDate);
     }
     
     /**
      * Get the value of DOCUMENT_BASEVALUE
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_BASEVALUE()
+     */
+    public function getDocumentBasevalue()
     {
-        return $this->DOCUMENT_BASEVALUE;
+        return $this->document_basevalue;
     }
 
     /**
      * Valor da nota fiscal
      *
-     * @param  float  $DOCUMENT_BASEVALUE
+     * @param  float  $document_basevalue
      *
-     */ 
-    public function setDOCUMENT_BASEVALUE(float $DOCUMENT_BASEVALUE)
+     */
+    public function setDocumentBasevalue(float $document_basevalue)
     {
-        $this->DOCUMENT_BASEVALUE = $DOCUMENT_BASEVALUE;
+        $this->document_basevalue = $document_basevalue;
     }
 
     /**
      * Get the value of DOCUMENT_DESCRIPTION
      *
      * @return  string
-     */ 
-    public function getDOCUMENT_DESCRIPTION()
+     */
+    public function getDocumentDescription()
     {
-        return $this->DOCUMENT_DESCRIPTION;
+        return $this->document_description;
     }
 
     /**
      * Descrição da nota fiscal
      *
-     * @param  string  $DOCUMENT_DESCRIPTION
-     */ 
-    public function setDOCUMENT_DESCRIPTION(string $DOCUMENT_DESCRIPTION)
+     * @param  string  $document_description
+     */
+    public function setDocumentDescription(string $document_description)
     {
-        $this->DOCUMENT_DESCRIPTION = $DOCUMENT_DESCRIPTION;
+        $this->document_description = $document_description;
     }
 
     /**
      * Get the value of DOCUMENT_COMPETENCE
      *
      * @return  string
-     */ 
-    public function getDOCUMENT_COMPETENCE()
+     */
+    public function getDocumentCompetence()
     {
-        return $this->DOCUMENT_COMPETENCE;
+        return $this->document_competence;
     }
 
     /**
      * Competência. Utilizar padrão: YYYY-mm-dd
      *
-     * @param  string  $DOCUMENT_COMPETENCE
-     */ 
-    public function setDOCUMENT_COMPETENCE(string $DOCUMENT_COMPETENCE)
+     * @param  string  $document_competence
+     */
+    public function setDocumentCompetence(string $document_competence)
     {
-        $this->DOCUMENT_COMPETENCE = $DOCUMENT_COMPETENCE;
+        $this->document_competence = $document_competence;
     }
 
     /**
      * Get the value of DOCUMENT_CNAE
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_CNAE()
+     */
+    public function getDocumentCnae()
     {
-        return $this->DOCUMENT_CNAE;
+        return $this->document_cnae;
     }
 
     /**
-     * 	CNAE. Documentação: http://www.cnae.ibge.gov.br
+     *  CNAE. Documentação: http://www.cnae.ibge.gov.br
      *
-     * @param  int  $DOCUMENT_CNAE
-     */ 
-    public function setDOCUMENT_CNAE(int $DOCUMENT_CNAE)
+     * @param  int  $document_cnae
+     */
+    public function setDocumentCnae(int $document_cnae)
     {
-        $this->DOCUMENT_CNAE = $DOCUMENT_CNAE;
+        $this->document_cnae = $document_cnae;
     }
 
     /**
      * Get the value of DOCUMENT_ISSUE_DATE
      *
      * @return  string
-     */ 
-    public function getDOCUMENT_ISSUE_DATE()
+     */
+    public function getDocumentIssueDate()
     {
-        return $this->DOCUMENT_ISSUE_DATE;
+        return $this->document_issue_date;
     }
 
     /**
      * Data de emissão automática da nota fiscal (por padrão é a data atual) formato YYYY-mm-dd HH:ii:ss
      *
-     * @param  string  $DOCUMENT_ISSUE_DATE
-     */ 
-    public function setDOCUMENT_ISSUE_DATE(string $DOCUMENT_ISSUE_DATE)
+     * @param  string  $document_issue_date
+     */
+    public function setDocumentIssueDate(string $document_issue_date)
     {
-        $this->DOCUMENT_ISSUE_DATE = $DOCUMENT_ISSUE_DATE;
+        $this->document_issue_date = $document_issue_date;
     }
 }

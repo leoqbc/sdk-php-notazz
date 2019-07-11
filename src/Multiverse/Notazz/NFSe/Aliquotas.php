@@ -44,8 +44,7 @@ class Aliquotas extends Resource
         float $ir = null,
         float $pis = null,
         float $iss = null
-    )
-    {
+    ) {
         $this->COFINS = $confis;
         $this->CSLL = $csll;
         $this->INSS = $inss;
@@ -57,7 +56,7 @@ class Aliquotas extends Resource
      * Get the value of COFINS
      *
      * @return  float
-     */ 
+     */
     public function getCOFINS()
     {
         return $this->COFINS;
@@ -67,7 +66,7 @@ class Aliquotas extends Resource
      * Set the value of COFINS
      *
      * @param  float  $COFINS
-     */ 
+     */
     public function setCOFINS(float $COFINS)
     {
         $this->COFINS = $COFINS;
@@ -77,7 +76,7 @@ class Aliquotas extends Resource
      * Get the value of CSLL
      *
      * @return  float
-     */ 
+     */
     public function getCSLL()
     {
         return $this->CSLL;
@@ -87,7 +86,7 @@ class Aliquotas extends Resource
      * Set the value of CSLL
      *
      * @param  float  $CSLL
-     */ 
+     */
     public function setCSLL(float $CSLL)
     {
         $this->CSLL = $CSLL;
@@ -97,7 +96,7 @@ class Aliquotas extends Resource
      * Get the value of INSS
      *
      * @return  float
-     */ 
+     */
     public function getINSS()
     {
         return $this->INSS;
@@ -107,7 +106,7 @@ class Aliquotas extends Resource
      * Set the value of INSS
      *
      * @param  float  $INSS
-     */ 
+     */
     public function setINSS(float $INSS)
     {
         $this->INSS = $INSS;
@@ -117,7 +116,7 @@ class Aliquotas extends Resource
      * Get the value of IR
      *
      * @return  float
-     */ 
+     */
     public function getIR()
     {
         return $this->IR;
@@ -127,7 +126,7 @@ class Aliquotas extends Resource
      * Set the value of IR
      *
      * @param  float  $IR
-     */ 
+     */
     public function setIR(float $IR)
     {
         $this->IR = $IR;
@@ -137,7 +136,7 @@ class Aliquotas extends Resource
      * Get the value of PIS
      *
      * @return  float
-     */ 
+     */
     public function getPIS()
     {
         return $this->PIS;
@@ -147,7 +146,7 @@ class Aliquotas extends Resource
      * Set the value of PIS
      *
      * @param  float  $PIS
-     */ 
+     */
     public function setPIS(float $PIS)
     {
         $this->PIS = $PIS;
@@ -157,7 +156,7 @@ class Aliquotas extends Resource
      * Get the value of ISS
      *
      * @return  float
-     */ 
+     */
     public function getISS()
     {
         return $this->ISS;
@@ -167,7 +166,7 @@ class Aliquotas extends Resource
      * Set the value of ISS
      *
      * @param  float  $ISS
-     */ 
+     */
     public function setISS(float $ISS)
     {
         $this->ISS = $ISS;

@@ -7,418 +7,418 @@ class ProductItem extends Resource
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_COD = 0;
+    protected $document_product_cod;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_TAX_COD;
+    protected $document_product_tax_cod;
     /**
      * @var mixed
      */
-    protected $DOCUMENT_PRODUCT_EAN;
+    protected $document_product_ean;
     /**
      * @var string
      */
-    protected $DOCUMENT_PRODUCT_NAME;
+    protected $document_product_name;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_QTD;
+    protected $document_product_qtd;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_UNITARY_VALUE;
+    protected $document_product_unitary_value;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_NCM;
+    protected $document_product_ncm;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_CEST;
+    protected $document_product_cest;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_CFOP;
+    protected $document_product_cfop;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_DISCOUNT;
+    protected $document_product_discount;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_ICMS_CST;
+    protected $document_product_icms_cst;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_ICMS_ALIQUOTA;
+    protected $document_product_icms_aliquota;
     /**
      * @var int
      */
-    protected $DOCUMENT_PRODUCT_IPI_CST;
+    protected $document_product_ipi_cst;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_IPI_ALIQUOTA;
+    protected $document_product_ipi_aliquota;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_PIS_ALIQUOTA;
+    protected $document_product_pis_aliquota;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_COFINS_CST;
+    protected $document_product_cofins_cst;
     /**
      * @var float
      */
-    protected $DOCUMENT_PRODUCT_COFINS_ALIQUOTA;
+    protected $document_product_cofins_aliquota;
 
 
     public function fillRequired(int $cod, string $name, int $qtd, float $unitaryValue)
     {
-        $this->DOCUMENT_PRODUCT_COD = $cod;
-        $this->DOCUMENT_PRODUCT_NAME = $name;
-        $this->DOCUMENT_PRODUCT_QTD = $qtd;
-        $this->DOCUMENT_PRODUCT_UNITARY_VALUE = $unitaryValue;
+        $this->document_product_cod = $cod;
+        $this->document_product_name = $name;
+        $this->document_product_qtd = $qtd;
+        $this->document_product_unitary_value = $unitaryValue;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_COD
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_COD()
+     */
+    public function getDocumentProductCod()
     {
-        return $this->DOCUMENT_PRODUCT_COD;
+        return $this->document_product_cod;
     }
 
     /**
      * Cód do produto
      *
-     * @param  int  $DOCUMENT_PRODUCT_COD
-     */ 
-    public function setDOCUMENT_PRODUCT_COD(int $DOCUMENT_PRODUCT_COD)
+     * @param  int  $document_product_cod
+     */
+    public function setDocumentProductCod(int $document_product_cod)
     {
-        $this->DOCUMENT_PRODUCT_COD = $DOCUMENT_PRODUCT_COD;
+        $this->document_product_cod = $document_product_cod;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_TAX_COD
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_TAX_COD()
+     */
+    public function getDocumentProductTaxCod()
     {
-        return $this->DOCUMENT_PRODUCT_TAX_COD;
+        return $this->document_product_tax_cod;
     }
 
     /**
      * Cód fiscal do produto (código da logística)
      *
-     * @param  int  $DOCUMENT_PRODUCT_TAX_COD
-     */ 
-    public function setDOCUMENT_PRODUCT_TAX_COD(int $DOCUMENT_PRODUCT_TAX_COD)
+     * @param  int  $document_product_tax_cod
+     */
+    public function setDocumentProductTaxCod(int $document_product_tax_cod)
     {
-        $this->DOCUMENT_PRODUCT_TAX_COD = $DOCUMENT_PRODUCT_TAX_COD;
+        $this->document_product_tax_cod = $document_product_tax_cod;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_EAN
      *
      * @return  string
-     */ 
-    public function getDOCUMENT_PRODUCT_EAN()
+     */
+    public function getDocumentProductEan()
     {
-        return $this->DOCUMENT_PRODUCT_EAN;
+        return $this->document_product_ean;
     }
 
     /**
      * Código de barras
      *
-     * @param  mixed  $DOCUMENT_PRODUCT_EAN
-     */ 
-    public function setDOCUMENT_PRODUCT_EAN($DOCUMENT_PRODUCT_EAN)
+     * @param  mixed  $document_product_ean
+     */
+    public function setDocumentProductEan($document_product_ean)
     {
-        $this->DOCUMENT_PRODUCT_EAN = $DOCUMENT_PRODUCT_EAN;
+        $this->document_product_ean = $document_product_ean;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_NAME
      *
      * @return  string
-     */ 
-    public function getDOCUMENT_PRODUCT_NAME()
+     */
+    public function getDocumentProductName()
     {
-        return $this->DOCUMENT_PRODUCT_NAME;
+        return $this->document_product_name;
     }
 
     /**
      * Nome do produto
      *
-     * @param  string  $DOCUMENT_PRODUCT_NAME
-     */ 
-    public function setDOCUMENT_PRODUCT_NAME(string $DOCUMENT_PRODUCT_NAME)
+     * @param  string  $document_product_name
+     */
+    public function setDocumentProductName(string $document_product_name)
     {
-        $this->DOCUMENT_PRODUCT_NAME = $DOCUMENT_PRODUCT_NAME;
+        $this->document_product_name = $document_product_name;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_QTD
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_QTD()
+     */
+    public function getDocumentProductQtd()
     {
-        return $this->DOCUMENT_PRODUCT_QTD;
+        return $this->document_product_qtd;
     }
 
     /**
      * Quantidade de itens
      *
-     * @param  int  $DOCUMENT_PRODUCT_QTD
-     */ 
-    public function setDOCUMENT_PRODUCT_QTD(int $DOCUMENT_PRODUCT_QTD)
+     * @param  int  $document_product_qtd
+     */
+    public function setDocumentProductQtd(int $document_product_qtd)
     {
-        $this->DOCUMENT_PRODUCT_QTD = $DOCUMENT_PRODUCT_QTD;
+        $this->document_product_qtd = $document_product_qtd;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_UNITARY_VALUE
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_UNITARY_VALUE()
+     */
+    public function getDocumentProductUnitaryValue()
     {
-        return $this->DOCUMENT_PRODUCT_UNITARY_VALUE;
+        return $this->document_product_unitary_value;
     }
 
     /**
      * Valor unitário do item
      *
-     * @param  float  $DOCUMENT_PRODUCT_UNITARY_VALUE
-     */ 
-    public function setDOCUMENT_PRODUCT_UNITARY_VALUE(float $DOCUMENT_PRODUCT_UNITARY_VALUE)
+     * @param  float  $document_product_unitary_value
+     */
+    public function setDocumentProductUnitaryValue(float $document_product_unitary_value)
     {
-        $this->DOCUMENT_PRODUCT_UNITARY_VALUE = $DOCUMENT_PRODUCT_UNITARY_VALUE;
+        $this->document_product_unitary_value = $document_product_unitary_value;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_NCM
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_NCM()
+     */
+    public function getDocumentProductNcm()
     {
-        return $this->DOCUMENT_PRODUCT_NCM;
+        return $this->document_product_ncm;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_NCM
      *
-     * @param  int  $DOCUMENT_PRODUCT_NCM
-     */ 
-    public function setDOCUMENT_PRODUCT_NCM(int $DOCUMENT_PRODUCT_NCM)
+     * @param  int  $document_product_ncm
+     */
+    public function setDocumentProductNcm(int $document_product_ncm)
     {
-        $this->DOCUMENT_PRODUCT_NCM = $DOCUMENT_PRODUCT_NCM;
+        $this->document_product_ncm = $document_product_ncm;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_CEST
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_CEST()
+     */
+    public function getDocumentProductCest()
     {
-        return $this->DOCUMENT_PRODUCT_CEST;
+        return $this->document_product_cest;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_CEST
      *
-     * @param  int  $DOCUMENT_PRODUCT_CEST
-     */ 
-    public function setDOCUMENT_PRODUCT_CEST(int $DOCUMENT_PRODUCT_CEST)
+     * @param  int  $document_product_cest
+     */
+    public function setDocumentProductCest(int $document_product_cest)
     {
-        $this->DOCUMENT_PRODUCT_CEST = $DOCUMENT_PRODUCT_CEST;
+        $this->document_product_cest = $document_product_cest;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_CFOP
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_CFOP()
+     */
+    public function getDocumentProductCfop()
     {
-        return $this->DOCUMENT_PRODUCT_CFOP;
+        return $this->document_product_cfop;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_CFOP
      *
-     * @param  int  $DOCUMENT_PRODUCT_CFOP
-     */ 
-    public function setDOCUMENT_PRODUCT_CFOP(int $DOCUMENT_PRODUCT_CFOP)
+     * @param  int  $document_product_cfop
+     */
+    public function setDocumentProductCfop(int $document_product_cfop)
     {
-        $this->DOCUMENT_PRODUCT_CFOP = $DOCUMENT_PRODUCT_CFOP;
+        $this->document_product_cfop = $document_product_cfop;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_DISCOUNT
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_DISCOUNT()
+     */
+    public function getDocumentProductDiscount()
     {
-        return $this->DOCUMENT_PRODUCT_DISCOUNT;
+        return $this->document_product_discount;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_DISCOUNT
      *
-     * @param  float  $DOCUMENT_PRODUCT_DISCOUNT
-     */ 
-    public function setDOCUMENT_PRODUCT_DISCOUNT(float $DOCUMENT_PRODUCT_DISCOUNT)
+     * @param  float  $document_product_discount
+     */
+    public function setDocumentProductDiscount(float $document_product_discount)
     {
-        $this->DOCUMENT_PRODUCT_DISCOUNT = $DOCUMENT_PRODUCT_DISCOUNT;
+        $this->document_product_discount = $document_product_discount;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_ICMS_CST
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_ICMS_CST()
+     */
+    public function getDocumentProductIcmsCst()
     {
-        return $this->DOCUMENT_PRODUCT_ICMS_CST;
+        return $this->document_product_icms_cst;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_ICMS_CST
      *
-     * @param  int  $DOCUMENT_PRODUCT_ICMS_CST
-     */ 
-    public function setDOCUMENT_PRODUCT_ICMS_CST(int $DOCUMENT_PRODUCT_ICMS_CST)
+     * @param  int  $document_product_icms_cst
+     */
+    public function setDocumentProductIcmsCst(int $document_product_icms_cst)
     {
-        $this->DOCUMENT_PRODUCT_ICMS_CST = $DOCUMENT_PRODUCT_ICMS_CST;
+        $this->document_product_icms_cst = $document_product_icms_cst;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_ICMS_ALIQUOTA
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_ICMS_ALIQUOTA()
+     */
+    public function getDocumentProductIcmsAliquota()
     {
-        return $this->DOCUMENT_PRODUCT_ICMS_ALIQUOTA;
+        return $this->document_product_icms_aliquota;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_ICMS_ALIQUOTA
      *
-     * @param  float  $DOCUMENT_PRODUCT_ICMS_ALIQUOTA
-     */ 
-    public function setDOCUMENT_PRODUCT_ICMS_ALIQUOTA(float $DOCUMENT_PRODUCT_ICMS_ALIQUOTA)
+     * @param  float  $document_product_icms_aliquota
+     */
+    public function setDocumentProductIcmsAliquota(float $document_product_icms_aliquota)
     {
-        $this->DOCUMENT_PRODUCT_ICMS_ALIQUOTA = $DOCUMENT_PRODUCT_ICMS_ALIQUOTA;
+        $this->document_product_icms_aliquota = $document_product_icms_aliquota;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_IPI_CST
      *
      * @return  int
-     */ 
-    public function getDOCUMENT_PRODUCT_IPI_CST()
+     */
+    public function getDocumentProductIpiCst()
     {
-        return $this->DOCUMENT_PRODUCT_IPI_CST;
+        return $this->document_product_ipi_cst;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_IPI_CST
      *
-     * @param  int  $DOCUMENT_PRODUCT_IPI_CST
-     */ 
-    public function setDOCUMENT_PRODUCT_IPI_CST(int $DOCUMENT_PRODUCT_IPI_CST)
+     * @param  int  $document_product_ipi_cst
+     */
+    public function setDocumentProductIpiCst(int $document_product_ipi_cst)
     {
-        $this->DOCUMENT_PRODUCT_IPI_CST = $DOCUMENT_PRODUCT_IPI_CST;
+        $this->document_product_ipi_cst = $document_product_ipi_cst;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_IPI_ALIQUOTA
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_IPI_ALIQUOTA()
+     */
+    public function getDocumentProductIpiAliquota()
     {
-        return $this->DOCUMENT_PRODUCT_IPI_ALIQUOTA;
+        return $this->document_product_ipi_aliquota;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_IPI_ALIQUOTA
      *
-     * @param  float  $DOCUMENT_PRODUCT_IPI_ALIQUOTA
-     */ 
-    public function setDOCUMENT_PRODUCT_IPI_ALIQUOTA(float $DOCUMENT_PRODUCT_IPI_ALIQUOTA)
+     * @param  float  $document_product_ipi_aliquota
+     */
+    public function setDocumentProductIpiAliquota(float $document_product_ipi_aliquota)
     {
-        $this->DOCUMENT_PRODUCT_IPI_ALIQUOTA = $DOCUMENT_PRODUCT_IPI_ALIQUOTA;
+        $this->document_product_ipi_aliquota = $document_product_ipi_aliquota;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_PIS_ALIQUOTA
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_PIS_ALIQUOTA()
+     */
+    public function getDocumentProductPisAliquota()
     {
-        return $this->DOCUMENT_PRODUCT_PIS_ALIQUOTA;
+        return $this->document_product_pis_aliquota;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_PIS_ALIQUOTA
      *
-     * @param  float  $DOCUMENT_PRODUCT_PIS_ALIQUOTA
-     */ 
-    public function setDOCUMENT_PRODUCT_PIS_ALIQUOTA(float $DOCUMENT_PRODUCT_PIS_ALIQUOTA)
+     * @param  float  $document_product_pis_aliquota
+     */
+    public function setDocumentProductPisAliquota(float $document_product_pis_aliquota)
     {
-        $this->DOCUMENT_PRODUCT_PIS_ALIQUOTA = $DOCUMENT_PRODUCT_PIS_ALIQUOTA;
+        $this->document_product_pis_aliquota = $document_product_pis_aliquota;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_COFINS_CST
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_COFINS_CST()
+     */
+    public function getDocumentProductCofinsCst()
     {
-        return $this->DOCUMENT_PRODUCT_COFINS_CST;
+        return $this->document_product_cofins_cst;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_COFINS_CST
      *
-     * @param  float  $DOCUMENT_PRODUCT_COFINS_CST
-     */ 
-    public function setDOCUMENT_PRODUCT_COFINS_CST(float $DOCUMENT_PRODUCT_COFINS_CST)
+     * @param  float  $document_product_cofins_cst
+     */
+    public function setDocumentProductCofinsCst(float $document_product_cofins_cst)
     {
-        $this->DOCUMENT_PRODUCT_COFINS_CST = $DOCUMENT_PRODUCT_COFINS_CST;
+        $this->document_product_cofins_cst = $document_product_cofins_cst;
     }
 
     /**
      * Get the value of DOCUMENT_PRODUCT_COFINS_ALIQUOTA
      *
      * @return  float
-     */ 
-    public function getDOCUMENT_PRODUCT_COFINS_ALIQUOTA()
+     */
+    public function getDocumentProductCofinsAliquota()
     {
-        return $this->DOCUMENT_PRODUCT_COFINS_ALIQUOTA;
+        return $this->document_product_cofins_aliquota;
     }
 
     /**
      * Set the value of DOCUMENT_PRODUCT_COFINS_ALIQUOTA
      *
-     * @param  float  $DOCUMENT_PRODUCT_COFINS_ALIQUOTA
-     */ 
-    public function setDOCUMENT_PRODUCT_COFINS_ALIQUOTA(float $DOCUMENT_PRODUCT_COFINS_ALIQUOTA)
+     * @param  float  $document_product_cofins_aliquota
+     */
+    public function setDocumentProductCofinsAliquota(float $document_product_cofins_aliquota)
     {
-        $this->DOCUMENT_PRODUCT_COFINS_ALIQUOTA = $DOCUMENT_PRODUCT_COFINS_ALIQUOTA;
+        $this->document_product_cofins_aliquota = $document_product_cofins_aliquota;
     }
 }

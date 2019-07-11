@@ -16,11 +16,9 @@ class NotaFiscalNFeSendTest extends TestCase
 
     public function setUp() : void
     {
-        $client = new GuzzleHttp\Client;
-
         $this->apiKey = '123';
 
-        $this->notafiscal = new NotaFiscalBuilder($client);
+        $this->notafiscal = new NotaFiscalBuilder();
     }
 
     public function testNotaFiscalBuilderIsNfe()
@@ -39,8 +37,6 @@ class NotaFiscalNFeSendTest extends TestCase
 
         $stream->method('getContents')
                 ->willReturn('{"statusProcessamento":"sucesso","codigoProcessamento":"000","id":"123"}');
-
-        
 
         $result = 
             $this->notafiscal
@@ -92,7 +88,7 @@ class NotaFiscalNFeSendTest extends TestCase
             $this->notafiscal
                 ->key('123')
                 ->destination()
-                    ->name('Leonardo Tumadjian')
+                    ->name('John Doe')
                     ->taxid('00000000272')
                     ->taxtype('F')
                     ->street('NÃO INFORMADO')

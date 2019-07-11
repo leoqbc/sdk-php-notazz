@@ -5,393 +5,373 @@ class Destination extends Resource
     /**
      * @var string
      */
-    protected $DESTINATION_NAME;
+    protected $destination_name;
     /**
      * @var int
      */
-    protected $DESTINATION_TAXID;
+    protected $destination_taxid;
     /**
      * @var string
      */
-    protected $DESTINATION_IE;
+    protected $destination_ie;
     /**
      * @var string
      */
-    protected $DESTINATION_IM;
+    protected $destination_im;
     /**
      * @var string
      */
-    protected $DESTINATION_TAXTYPE;
+    protected $destination_taxtype;
     /**
      * @var string
      */
-    protected $DESTINATION_STREET;
+    protected $destination_street;
     /**
      * @var string
      */
-    protected $DESTINATION_NUMBER;
+    protected $destination_number;
     /**
      * @var string
      */
-    protected $DESTINATION_COMPLEMENT;
+    protected $destination_complement;
     /**
      * @var string
      */
-    protected $DESTINATION_DISTRICT;
+    protected $destination_district;
     /**
      * @var string
      */
-    protected $DESTINATION_CITY;
+    protected $destination_city;
     /**
      * @var string
      */
-    protected $DESTINATION_UF;
+    protected $destination_uf;
     /**
      * @var string
      */
-    protected $DESTINATION_ZIPCODE;
+    protected $destination_zipcode;
     /**
      * @var int
      */
-    protected $DESTINATION_PHONE;
+    protected $destination_phone;
     /**
      * @var string
      */
-    protected $DESTINATION_EMAIL;
+    protected $destination_email;
     /**
      * @var array
      */
-    protected $DESTINATION_EMAIL_SEND;
+    protected $destination_email_send;
 
     /**
      * Get the value of DESTINATION_NAME
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_NAME()
+     * @return string
+     */
+    public function getDestinationName()
     {
-        return $this->DESTINATION_NAME;
+        return $this->destination_name;
     }
 
     /**
      * Set the value of DESTINATION_NAME
      *
-     * @param  string  $DESTINATION_NAME
-     *
-     
-     */ 
-    public function setDESTINATION_NAME(string $DESTINATION_NAME)
+     * @param string $destination_name
+     */
+    public function setDestinationName(string $destination_name)
     {
-        $this->DESTINATION_NAME = $DESTINATION_NAME;
+        $this->destination_name = $destination_name;
     }
 
     /**
      * Get the value of DESTINATION_TAXID
      *
-     * @return  int
-     */ 
-    public function getDESTINATION_TAXID()
+     * @return int
+     */
+    public function getDestinationTaxid()
     {
-        return $this->DESTINATION_TAXID;
+        return $this->destination_taxid;
     }
 
     /**
      * Set the value of DESTINATION_TAXID
      * CPF ou CNPJ
-     * 
-     * @param  int  $DESTINATION_TAXID
      *
-     */ 
-    public function setDESTINATION_TAXID(string $DESTINATION_TAXID)
+     * @param int $destination_taxid
+     */
+    public function setDestinationTaxid(string $destination_taxid)
     {
-        $this->DESTINATION_TAXID = $DESTINATION_TAXID;
+        $this->destination_taxid = $destination_taxid;
     }
 
     /**
      * Get the value of DESTINATION_IE
-     * 
-     * @return  string
-     */ 
-    public function getDESTINATION_IE()
+     *
+     * @return string
+     */
+    public function getDestinationIe()
     {
-        return $this->DESTINATION_IE;
+        return $this->destination_ie;
     }
 
     /**
      * Set the value of DESTINATION_IE
      * Inscrição Estadual
-     * 
-     * @param  string  $DESTINATION_IE
      *
-     */ 
-    public function setDESTINATION_IE(string $DESTINATION_IE)
+     * @param string $destination_ie
+     */
+    public function setDestinationIe(string $destination_ie)
     {
-        $this->DESTINATION_IE = $DESTINATION_IE;
+        $this->destination_ie = $destination_ie;
     }
 
     /**
      * Get the value of DESTINATION_IM
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_IM()
+     * @return string
+     */
+    public function getDestinationIm()
     {
-        return $this->DESTINATION_IM;
+        return $this->destination_im;
     }
 
     /**
      * Set the value of DESTINATION_IM
      * Inscrição Municipal
-     * 
-     * @param  string  $DESTINATION_IM
      *
-     */ 
-    public function setDESTINATION_IM(string $DESTINATION_IM)
+     * @param string $destination_im
+     */
+    public function setDestinationIm(string $destination_im)
     {
-        $this->DESTINATION_IM = $DESTINATION_IM;
+        $this->destination_im = $destination_im;
     }
 
     /**
      * Get the value of DESTINATION_TAXTYPE
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_TAXTYPE()
+     * @return string
+     */
+    public function getDestinationTaxtype()
     {
-        return $this->DESTINATION_TAXTYPE;
+        return $this->destination_taxtype;
     }
 
     /**
      * Set the value of DESTINATION_TAXTYPE
      * F = Física, J = Jurídica, E = Estrangeiro
-     *  
-     * @param  string  $DESTINATION_TAXTYPE
      *
-     */ 
-    public function setDESTINATION_TAXTYPE(string $DESTINATION_TAXTYPE)
+     * @param string $destination_taxtype
+     */
+    public function setDestinationTaxtype(string $destination_taxtype)
     {
-        $this->DESTINATION_TAXTYPE = $DESTINATION_TAXTYPE;        
+        $this->destination_taxtype = $destination_taxtype;
     }
 
     /**
      * Get the value of DESTINATION_STREET
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_STREET()
+     * @return string
+     */
+    public function getDestinationStreet()
     {
-        return $this->DESTINATION_STREET;
+        return $this->destination_street;
     }
 
     /**
      * Set the value of DESTINATION_STREET
      * Logradouro
-     * 
-     * @param  string  $DESTINATION_STREET
      *
-     */ 
-    public function setDESTINATION_STREET(string $DESTINATION_STREET)
+     * @param string $destination_street
+     */
+    public function setDestinationStreet(string $destination_street)
     {
-        $this->DESTINATION_STREET = $DESTINATION_STREET;
+        $this->destination_street = $destination_street;
     }
 
     /**
      * Get the value of DESTINATION_NUMBER
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_NUMBER()
+     * @return string
+     */
+    public function getDestinationNumber()
     {
-        return $this->DESTINATION_NUMBER;
+        return $this->destination_number;
     }
 
     /**
      * Set the value of DESTINATION_NUMBER
      *
-     * @param  string  $DESTINATION_NUMBER
-     *
-     
-     */ 
-    public function setDESTINATION_NUMBER(string $DESTINATION_NUMBER)
+     * @param string $destination_number
+     */
+    public function setDestinationNumber(string $destination_number)
     {
-        $this->DESTINATION_NUMBER = $DESTINATION_NUMBER;
+        $this->destination_number = $destination_number;
     }
 
     /**
      * Get the value of DESTINATION_COMPLEMENT
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_COMPLEMENT()
+     * @return string
+     */
+    public function getDestinationComplement()
     {
-        return $this->DESTINATION_COMPLEMENT;
+        return $this->destination_complement;
     }
 
     /**
      * Set the value of DESTINATION_COMPLEMENT
      *
-     * @param  string  $DESTINATION_COMPLEMENT
-     *
-     
-     */ 
-    public function setDESTINATION_COMPLEMENT(string $DESTINATION_COMPLEMENT)
+     * @param string $destination_complement
+     */
+    public function setDestinationComplement(string $destination_complement)
     {
-        $this->DESTINATION_COMPLEMENT = $DESTINATION_COMPLEMENT;
+        $this->destination_complement = $destination_complement;
     }
 
     /**
      * Get the value of DESTINATION_DISTRICT
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_DISTRICT()
+     * @return string
+     */
+    public function getDestinationDistrict()
     {
-        return $this->DESTINATION_DISTRICT;
+        return $this->destination_district;
     }
 
     /**
      * Set the value of DESTINATION_DISTRICT
      * Bairro
-     * 
-     * @param  string  $DESTINATION_DISTRICT
      *
-     
-     */ 
-    public function setDESTINATION_DISTRICT(string $DESTINATION_DISTRICT)
+     * @param string $destination_district
+     */
+    public function setDestinationDistrict(string $destination_district)
     {
-        $this->DESTINATION_DISTRICT = $DESTINATION_DISTRICT;
+        $this->destination_district = $destination_district;
     }
 
     /**
      * Get the value of DESTINATION_CITY
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_CITY()
+     * @return string
+     */
+    public function getDestinationCity()
     {
-        return $this->DESTINATION_CITY;
+        return $this->destination_city;
     }
 
     /**
      * Set the value of DESTINATION_CITY
      * Cidade
-     * 
-     * @param  string  $DESTINATION_CITY
      *
-     
-     */ 
-    public function setDESTINATION_CITY(string $DESTINATION_CITY)
+     * @param string $destination_city
+     */
+    public function setDestinationCity(string $destination_city)
     {
-        $this->DESTINATION_CITY = $DESTINATION_CITY;
+        $this->destination_city = $destination_city;
     }
 
     /**
      * Get the value of DESTINATION_UF
      *
-     * @return  int
-     */ 
-    public function getDESTINATION_UF()
+     * @return int
+     */
+    public function getDestinationUf()
     {
-        return $this->DESTINATION_UF;
+        return $this->destination_uf;
     }
 
     /**
      * Set the value of DESTINATION_UF
      *
-     * @param  int  $DESTINATION_UF
-     *
-     */ 
-    public function setDESTINATION_UF(string $DESTINATION_UF)
+     * @param int $destination_uf
+     */
+    public function setDestinationUf(string $destination_uf)
     {
-        $this->DESTINATION_UF = $DESTINATION_UF;        
+        $this->destination_uf = $destination_uf;
     }
 
     /**
      * Get the value of DESTINATION_ZIPCODE
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_ZIPCODE()
+     * @return string
+     */
+    public function getDestinationZipcode()
     {
-        return $this->DESTINATION_ZIPCODE;
+        return $this->destination_zipcode;
     }
 
     /**
      * Set the value of DESTINATION_ZIPCODE
      * CEP
-     *  
-     * @param  string  $DESTINATION_ZIPCODE
      *
-     */ 
-    public function setDESTINATION_ZIPCODE(string $DESTINATION_ZIPCODE)
+     * @param string $destination_zipcode
+     */
+    public function setDestinationZipcode(string $destination_zipcode)
     {
-        $this->DESTINATION_ZIPCODE = $DESTINATION_ZIPCODE;
+        $this->destination_zipcode = $destination_zipcode;
     }
 
     /**
      * Get the value of DESTINATION_PHONE
      *
-     * @return  int
-     */ 
-    public function getDESTINATION_PHONE()
+     * @return int
+     */
+    public function getDestinationPhone()
     {
-        return $this->DESTINATION_PHONE;
+        return $this->destination_phone;
     }
 
     /**
      * Set the value of DESTINATION_PHONE
      *
-     * @param  int  $DESTINATION_PHONE
-     *
-     */ 
-    public function setDESTINATION_PHONE(string $DESTINATION_PHONE)
+     * @param int $destination_phone
+     */
+    public function setDestinationPhone(string $destination_phone)
     {
-        $this->DESTINATION_PHONE = $DESTINATION_PHONE;
+        $this->destination_phone = $destination_phone;
     }
 
     /**
      * Get the value of DESTINATION_EMAIL
      *
-     * @return  string
-     */ 
-    public function getDESTINATION_EMAIL()
+     * @return string
+     */
+    public function getDestinationEmail()
     {
-        return $this->DESTINATION_EMAIL;
+        return $this->destination_email;
     }
 
     /**
      * Set the value of DESTINATION_EMAIL
-     * 
-     * @param  string  $DESTINATION_EMAIL
      *
-     */ 
-    public function setDESTINATION_EMAIL(string $DESTINATION_EMAIL)
+     * @param string $destination_email
+     */
+    public function setDestinationEmail(string $destination_email)
     {
-        $this->DESTINATION_EMAIL = $DESTINATION_EMAIL;        
+        $this->destination_email = $destination_email;
     }
 
     /**
      * Get the value of DESTINATION_EMAIL_SEND
-     * Esse parâmetro é um Array que irá conter os e-mails que será enviado após a nota ser autorizada ou cancelada. 
+     * Esse parâmetro é um Array que irá conter os e-mails que será enviado após a nota ser autorizada ou cancelada.
      * OBS: Para cada e-mail que será enviado, passe os parâmetros abaixo alterando o índice em +1 para cada e-mail
-     * 
-     * @return  array
-     */ 
-    public function getDESTINATION_EMAIL_SEND()
+     *
+     * @return array
+     */
+    public function getDestinationEmailSend()
     {
-        return $this->DESTINATION_EMAIL_SEND;
+        return $this->destination_email_send;
     }
 
     /**
      * Set the value of DESTINATION_EMAIL_SEND
-     * Esse parâmetro é um Array que irá conter os e-mails que será enviado após a nota ser autorizada ou cancelada. 
+     * Esse parâmetro é um Array que irá conter os e-mails que será enviado após a nota ser autorizada ou cancelada.
      * OBS: Para cada e-mail que será enviado, passe os parâmetros abaixo alterando o índice em +1 para cada e-mail
-     * 
-     * @param  array  $DESTINATION_EMAIL_SEND
      *
-     */ 
-    public function setDESTINATION_EMAIL_SEND(array $DESTINATION_EMAIL_SEND)
+     * @param array $destination_email_send
+     */
+    public function setDestinationEmailSend(array $destination_email_send)
     {
-        $this->DESTINATION_EMAIL_SEND = $DESTINATION_EMAIL_SEND;
+        $this->destination_email_send = $destination_email_send;
     }
 }

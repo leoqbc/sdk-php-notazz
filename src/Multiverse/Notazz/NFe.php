@@ -54,6 +54,4 @@ class NFe
 
         return $merge;
     }
-
-
 }

@@ -13,7 +13,7 @@ class ShippingCarrier extends Resource
     protected $DOCUMENT_FRETE_TRANSPORTADORA_CITY;
     protected $DOCUMENT_FRETE_TRANSPORTADORA_UF;
 
-    public function FunctionName(Type $var = null)
+    public function functionName(Type $var = null)
     {
         # code...
     }

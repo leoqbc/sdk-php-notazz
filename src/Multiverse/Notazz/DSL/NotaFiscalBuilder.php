@@ -8,6 +8,8 @@ use Multiverse\Notazz\DSL\DestinationBuilder;
 use Multiverse\Notazz\DSL\DocumentBuilder;
 use Multiverse\Notazz\DSL\ProductsBuilder;
 
+use GuzzleHttp\Client;
+
 class NotaFiscalBuilder
 {
     protected $destination;
@@ -22,9 +24,9 @@ class NotaFiscalBuilder
 
     protected $handler;
 
-    public function __construct($handler)
+    public function __construct()
     {
-        $this->handler = $handler;
+        $this->handler = new Client;
 
         $this->destination = new DestinationBuilder;
         $this->document = new DocumentBuilder;
