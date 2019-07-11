@@ -1,0 +1,16 @@
+{
+    "name": "multiverse/notazzsdk",
+    "description": "Notazz SDK api para integração com Notazz", 
+    "autoload": {
+        "psr-4": {
+            "Multiverse\\" : "src/Multiverse"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "scripts": {
+        "test": "phpunit test/FirstTest.php"
+    }
+}

@@ -1,2 +1,2 @@
 # sdk-php-notazz
-Simple SDK php lib for Notass (NFe e NFSe)
+SDK em PHP para emissão de nota fiscal NFE e NFSE
