@@ -29,7 +29,7 @@ class FirstTest extends TestCase
         $destination = new DestinationBuilder();
 
         $destination
-            ->name('Leonardo Tumadjian')
+            ->name('John Doe')
             ->taxid('00000000272')
             ->taxtype('F')
             ->street('NÃO INFORMADO')
@@ -43,14 +43,14 @@ class FirstTest extends TestCase
                 ->add('teste1@gmail.com')
                 ->add('teste2@gmail.com')
             ->end()
-            ->phone(11955555555)
+            ->phone('11955555555')
         ;
 
         $generated = $destination->getArray();
 
         $result = [
-            'DESTINATION_NAME' => 'Leonardo Tumadjian',
-            'DESTINATION_TAXID' => 272,
+            'DESTINATION_NAME' => 'John Doe',
+            'DESTINATION_TAXID' => '00000000272',
             'DESTINATION_TAXTYPE' => 'F',
             'DESTINATION_STREET' => 'NÃO INFORMADO',
             'DESTINATION_NUMBER' => 'S/N',
@@ -58,7 +58,7 @@ class FirstTest extends TestCase
             'DESTINATION_CITY' => 'São Paulo',
             'DESTINATION_UF' => 'SP',
             'DESTINATION_ZIPCODE' => '02102000',
-            'DESTINATION_PHONE' => 11955555555,
+            'DESTINATION_PHONE' => '11955555555',
             'DESTINATION_EMAIL' => 'teste@gmail.com',
             'DESTINATION_EMAIL_SEND' => [
                 'teste1@gmail.com',
@@ -76,7 +76,7 @@ class FirstTest extends TestCase
         $this->expectException(CantAddEmailException::class);
 
         $destination
-            ->name('Leonardo Tumadjian')
+            ->name('John Doe')
             ->taxid('00000000272')
             ->taxtype('F')
             ->street('NÃO INFORMADO')
@@ -90,7 +90,7 @@ class FirstTest extends TestCase
             ->sendEmailList()
                 ->add('teste2@gmail.com')
             ->end()
-            ->phone(11955555555)
+            ->phone('11955555555')
         ;
     }
 

@@ -1,6 +1,7 @@
 <?php namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\Destination;
+use Multiverse\Notazz\DSL\Tools\Formatter;
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 use Multiverse\Notazz\DSL\Exceptions\CantAddEmailException;
 
@@ -16,15 +17,15 @@ class DestinationBuilder
     {
         $this->destination = new Destination;
     }
-
+    
     public function __call(string $method, array $args)
     {
-        $method = strtoupper($method);
+        $method = ucfirst(Formatter::snakeToCamel($method));
         
-        $method = "setDESTINATION_$method";
+        $method = "setDestination$method";
 
         if (false === method_exists($this->destination, $method)) {
-            throw new MethodNotFoundException('Method not found in class ' . get_class($this->destination));
+            throw new MethodNotFoundException("Method ($method) not found in class " . get_class($this->destination));
         }
 
         $this->lastCalled = $method;
@@ -55,7 +56,7 @@ class DestinationBuilder
 
     public function end()
     {
-        $this->email_send($this->emailList);
+        $this->emailSend($this->emailList);
         $this->emailList = [];
         $this->lastCalled = false;
         return $this;

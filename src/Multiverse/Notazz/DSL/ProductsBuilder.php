@@ -3,6 +3,7 @@
 use Multiverse\Notazz\NFe\Products;
 use Multiverse\Notazz\NFe\ProductItem;
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
+use Multiverse\Notazz\DSL\Tools\Formatter;
 
 class ProductsBuilder
 {
@@ -21,9 +22,9 @@ class ProductsBuilder
     {
         $this->productItem = $this->makeProductItemInstance();
 
-        $method = strtoupper($method);
+        $method = ucfirst(Formatter::snakeToCamel($method));
         
-        $method = "setDOCUMENT_PRODUCT_$method";
+        $method = "setDocumentProduct$method";
 
         if (false === method_exists($this->productItem, $method)) {
             throw new MethodNotFoundException("Method ($method) not found in class " . get_class($this->productItem));

@@ -1,6 +1,6 @@
 <?php namespace Multiverse\Notazz;
 
-class Resource 
+class Resource
 {
     /**
      * @return array
@@ -12,7 +12,7 @@ class Resource
             if ($value === null) {
                 continue;
             }
-            $array[$key] = $value;
+            $array[strtoupper($key)] = $value;
         }
         return $array;
     }

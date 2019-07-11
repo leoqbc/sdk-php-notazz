@@ -7,15 +7,15 @@ class Products extends Resource
     /**
      * @var array
      */
-    protected $DOCUMENT_PRODUCT = [];
+    protected $document_product = [];
 
     /**
      * Adiciona produtos
-     * 
+     *
      * @param ProductItem
      */
     public function addItem(ProductItem $item)
     {
-        $this->DOCUMENT_PRODUCT[] = $item->toArray();
+        $this->document_product[] = $item->toArray();
     }
 }

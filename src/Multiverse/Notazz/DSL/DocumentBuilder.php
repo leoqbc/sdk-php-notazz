@@ -3,6 +3,8 @@
 use Multiverse\Notazz\NFSe\Document as NFSeDocument;
 use Multiverse\Notazz\NFe\Document as NFeDocument;
 
+use Multiverse\Notazz\DSL\Tools\Formatter;
+
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 
 class DocumentBuilder
@@ -41,9 +43,9 @@ class DocumentBuilder
 
     public function __call(string $method, array $args)
     {
-        $method = strtoupper($method);
+        $method = ucfirst(Formatter::snakeToCamel($method));
         
-        $method = "setDOCUMENT_$method";
+        $method = "setDocument$method";
 
         if (false === method_exists($this->document, $method)) {
             throw new MethodNotFoundException("Method ($method) not found in class " . get_class($this->document));

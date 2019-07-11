@@ -28,8 +28,7 @@ class NFSe
         Destination $destination,
         Document $document,
         Service $service = null
-    )
-    {
+    ) {
         $this->destination = $destination;
         $this->document = $document;
         $this->service = $service;
@@ -37,7 +36,7 @@ class NFSe
 
     /**
      * Monta a estruta da NFS-e
-     * 
+     *
      * @return array
      */
     public function mount() : array

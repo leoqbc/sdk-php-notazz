@@ -1,1 +1,3 @@
+#!/bin/bash
+
 ./vendor/bin/phpunit --colors=always test

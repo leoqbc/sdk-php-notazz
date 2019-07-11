@@ -20,7 +20,7 @@ class NotaFiscalNFeTest extends TestCase
         $this->notafiscal
                 ->key('123')
                 ->destination()
-                    ->name('Leonardo Tumadjian')
+                    ->name('John Doe')
                     ->taxid('00000000272')
                     ->taxtype('F')
                     ->street('NÃO INFORMADO')
@@ -63,7 +63,7 @@ class NotaFiscalNFeTest extends TestCase
         $this->notafiscal
                 ->key('123')
                 ->destination()
-                    ->name('Leonardo Tumadjian')
+                    ->name('John Doe')
                     ->taxid('00000000272')
                     ->taxtype('F')
                     ->street('NÃO INFORMADO')
@@ -103,7 +103,7 @@ class NotaFiscalNFeTest extends TestCase
   "DOCUMENT_BASEVALUE": 70.3,
   "DOCUMENT_DESCRIPTION": "Descrição teste",
   "DOCUMENT_ISSUE_DATE": "2019-07-05 18:11:30",
-  "DESTINATION_NAME": "Leonardo Tumadjian",
+  "DESTINATION_NAME": "John Doe",
   "DESTINATION_TAXID": "00000000272",
   "DESTINATION_TAXTYPE": "F",
   "DESTINATION_STREET": "NÃO INFORMADO",

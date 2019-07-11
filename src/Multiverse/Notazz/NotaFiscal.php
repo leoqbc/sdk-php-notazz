@@ -17,7 +17,7 @@ class NotaFiscal
      */
     protected $nota;
     /**
-     * @var 
+     * @var handler
      */
     protected $handler;
 
@@ -59,16 +59,16 @@ class NotaFiscal
      */
     protected function sendRequest()
     {
-        try{
+        try {
             $response = $this->handler->request('POST', self::API_URL, [
                 'form_params' => ["fields" => $this->prepareRequest()],
                 false
             ]);
 
             return $response->getBody()->getContents();
-        }catch(\Exception $e) {
+        } catch (\Exception $e) {
             throw $e;
-        } 
+        }
     }
 
     /**
@@ -89,7 +89,7 @@ class NotaFiscal
 }
 
 /**
- * NFS-e 
+ * NFS-e
  *  - API_KEY
  *  - METHOD
  *  - DESTINATION_NAME
@@ -108,7 +108,7 @@ class NotaFiscal
  *  - DOCUMENT_DESCRIPTION
  *  - DOCUMENT_COMPETENCE
  *  - DOCUMENT_ISSUE_DATE
- * 
+ *
  * NF-e
  *  - API_KEY
  *  - METHOD
