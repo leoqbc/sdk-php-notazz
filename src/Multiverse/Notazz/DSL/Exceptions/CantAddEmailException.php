@@ -3,4 +3,6 @@
 use Exception;
 
 class CantAddEmailException extends Exception
-{ }
+{
+
+}

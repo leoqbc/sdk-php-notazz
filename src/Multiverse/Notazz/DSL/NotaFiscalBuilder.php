@@ -76,16 +76,17 @@ class NotaFiscalBuilder
 
     protected function getNFObject()
     {
-        return $this->isNFE() ? 
-            new NFe(
-                $this->destination->getInstance(), 
-                $this->document->getInstance(), 
+        if ($this->isNFE()) {
+            return new NFe(
+                $this->destination->getInstance(),
+                $this->document->getInstance(),
                 $this->products->getInstance()
-            ) :
-            new NFSe(
-                $this->destination->getInstance(), 
-                $this->document->getInstance()
             );
+        }
+        return new NFSe(
+            $this->destination->getInstance(),
+            $this->document->getInstance()
+        );
     }
 
     public function make()
