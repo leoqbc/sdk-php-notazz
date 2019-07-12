@@ -1,5 +1,7 @@
-# sdk-php-notazz
-SDK em PHP para emissão de nota fiscal NFE e NFSE
+# SDK PHP Notazz
+[![Build Status](https://travis-ci.org/leoqbc/sdk-php-notazz.svg?branch=master)](https://travis-ci.org/leoqbc/sdk-php-notazz)
+
+SDK e DSL em PHP para emissão de nota fiscal NFE e NFSE
 
 # Abaixo exemplo de uso
 ```php
@@ -10,8 +12,7 @@ $notafiscal = new NotaFiscalBuilder();
 
 $result = 
     $notafiscal
-        ->setRequestHandler($client)
-        ->key('123')
+        ->key('123') // Notazz Api key 
         ->destination()
             ->name('John Doe')
             ->taxid('00000000272')
@@ -50,5 +51,5 @@ $result =
 ;
 ```
 
-# Obs
-No momento só foi implementado emissão de notafiscal
+# Obs:
+No momento só foi implementado emissão de notafiscal (NFe)
