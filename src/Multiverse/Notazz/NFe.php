@@ -28,6 +28,7 @@ class NFe
      * @param Destination
      * @param Document
      * @param Product
+     * @param Shipping
      */
     public function __construct(
         Destination $destination,
@@ -44,14 +45,21 @@ class NFe
     /**
      * @return array
      */
-    public function mount() : array
+    public function mount(): array
     {
-        $merge = array_merge(
+        if ($this->shipping === null) {
+            return array_merge(
+                $this->document->toArray(),
+                $this->destination->toArray(),
+                $this->products->toArray()
+            );
+        }
+
+        return array_merge(
             $this->document->toArray(),
             $this->destination->toArray(),
-            $this->products->toArray()
+            $this->products->toArray(),
+            $this->shipping->toArray()
         );
-
-        return $merge;
     }
 }
