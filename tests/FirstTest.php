@@ -22,7 +22,8 @@ class FirstTest extends TestCase
 
         $destination
             ->name('Leonardo Tumadjian')
-            ->tax('3333.333.333-33');
+            ->tax('3333.333.333-33')
+        ;
     }
 
     public function testDSLDestinationBuilderCouldBeFullFilled()
@@ -41,10 +42,11 @@ class FirstTest extends TestCase
             ->zipcode('02102000')
             ->email('teste@gmail.com')
             ->sendEmailList()
-            ->add('teste1@gmail.com')
-            ->add('teste2@gmail.com')
+                ->add('teste1@gmail.com')
+                ->add('teste2@gmail.com')
             ->end()
-            ->phone('11955555555');
+            ->phone('11955555555')
+        ;
 
         $generated = $destination->getArray();
 
@@ -88,9 +90,10 @@ class FirstTest extends TestCase
             ->email('teste@gmail.com')
             ->add('teste1@gmail.com')
             ->sendEmailList()
-            ->add('teste2@gmail.com')
+                ->add('teste2@gmail.com')
             ->end()
-            ->phone('11955555555');
+            ->phone('11955555555')
+        ;
     }
 
     public function testDSLDocumentBuilderIsNFSE()
@@ -99,9 +102,10 @@ class FirstTest extends TestCase
 
         $document
             ->nfse()
-            ->basevalue(1.00)
-            ->description('Descrição teste')
-            ->issue_date('2019-07-05 18:11:30');
+                ->basevalue(1.00)
+                ->description('Descrição teste')
+                ->issue_date('2019-07-05 18:11:30')
+            ;
 
         $nf = $document->getInstance();
 
@@ -114,9 +118,10 @@ class FirstTest extends TestCase
 
         $document
             ->nfe()
-            ->basevalue(1.00)
-            ->description('Descrição teste')
-            ->issue_date('2019-07-05 18:11:30');
+                ->basevalue(1.00)
+                ->description('Descrição teste')
+                ->issue_date('2019-07-05 18:11:30')
+            ;
 
         $nf = $document->getInstance();
 
@@ -127,10 +132,11 @@ class FirstTest extends TestCase
     {
         $document = (new DocumentBuilder)
             ->nfse()
-            ->basevalue(1.00)
-            ->description('Descrição teste')
-            ->issue_date('2019-07-05 18:11:30')
-            ->competence('2019-07-05 18:11:30');
+                ->basevalue(1.00)
+                ->description('Descrição teste')
+                ->issue_date('2019-07-05 18:11:30')
+                ->competence('2019-07-05 18:11:30')
+        ;
 
         $generated = $document->getArray();
 
@@ -148,9 +154,10 @@ class FirstTest extends TestCase
     {
         $document = (new DocumentBuilder)
             ->nfe()
-            ->basevalue(1.00)
-            ->description('Descrição teste')
-            ->issue_date('2019-07-05 18:11:30');
+                ->basevalue(1.00)
+                ->description('Descrição teste')
+                ->issue_date('2019-07-05 18:11:30')
+        ;
 
         $generated = $document->getArray();
 
@@ -167,10 +174,10 @@ class FirstTest extends TestCase
     {
         $document = (new DocumentBuilder)
             ->nfe()
-            ->basevalue(1.00)
-            ->description('Descrição teste')
-            ->issue_date('2019-07-05 18:11:30');
-
+                ->basevalue(1.00)
+                ->description('Descrição teste')
+                ->issue_date('2019-07-05 18:11:30')
+        ;
 
         $this->assertEquals($document::NFE, $document->getDocumentType());
     }
@@ -179,10 +186,11 @@ class FirstTest extends TestCase
     {
         $document = (new DocumentBuilder)
             ->nfse()
-            ->basevalue(1.00)
-            ->description('Descrição teste')
-            ->issue_date('2019-07-05 18:11:30')
-            ->competence('2019-07-05 18:11:30');
+                ->basevalue(1.00)
+                ->description('Descrição teste')
+                ->issue_date('2019-07-05 18:11:30')
+                ->competence('2019-07-05 18:11:30')
+        ;
 
         $generated = $document->getArray();
 
@@ -193,20 +201,20 @@ class FirstTest extends TestCase
     {
         $products = (new ProductsBuilder)
             ->add()
-            ->cod(123)
-            ->name('Escova de dentes Cepacol')
-            ->qtd(2)
-            ->unitary_value(15.20)
-            ->ncm(123)
+                ->cod(123)
+                ->name('Escova de dentes Cepacol')
+                ->qtd(2)
+                ->unitary_value(15.20)
+                ->ncm(123)
             ->save()
-
             ->add()
-            ->cod(123)
-            ->name('Pano de prato para cozinha')
-            ->qtd(1)
-            ->unitary_value(55.10)
-            ->ncm(123)
-            ->save();
+                ->cod(123)
+                ->name('Pano de prato para cozinha')
+                ->qtd(1)
+                ->unitary_value(55.10)
+                ->ncm(123)
+            ->save()
+        ;
 
         $result = [
             'DOCUMENT_PRODUCT' => [
@@ -240,7 +248,8 @@ class FirstTest extends TestCase
             ->inss(2.01)
             ->ir(1.05)
             ->pis(0.5)
-            ->iss(0.08);
+            ->iss(0.08)
+        ;
 
         $result = [
             'COFINS' => 1,
