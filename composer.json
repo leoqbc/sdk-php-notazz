@@ -1,6 +1,14 @@
 {
     "name": "multiverse/notazzsdk",
-    "description": "Notazz SDK api para integração com Notazz", 
+    "description": "Notazz SDK api para integração com Notazz",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonardo Tumadjian",
+            "email": "tumadjian@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Multiverse\\" : "src/Multiverse"
