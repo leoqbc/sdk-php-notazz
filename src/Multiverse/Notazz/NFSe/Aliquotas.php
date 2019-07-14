@@ -7,168 +7,168 @@ class Aliquotas extends Resource
     /**
      * @var float
      */
-    protected $COFINS;
+    protected $cofins;
     /**
      * @var float
      */
-    protected $CSLL;
+    protected $csll;
     /**
      * @var float
      */
-    protected $INSS;
+    protected $inss;
     /**
      * @var float
      */
-    protected $IR;
+    protected $ir;
     /**
      * @var float
      */
-    protected $PIS;
+    protected $pis;
     /**
      * @var float
      */
-    protected $ISS;
+    protected $iss;
 
     /**
-     * @param float $CONFIS
-     * @param float $CSLL
-     * @param float $INSS
-     * @param float $IR
-     * @param float $PIS
-     * @param float $ISS
+     * @param float $cofins
+     * @param float $csll
+     * @param float $inss
+     * @param float $ir
+     * @param float $pis
+     * @param float $iss
      */
     public function __construct(
-        float $confis = null,
+        float $cofins = null,
         float $csll = null,
         float $inss = null,
         float $ir = null,
         float $pis = null,
         float $iss = null
     ) {
-        $this->COFINS = $confis;
-        $this->CSLL = $csll;
+        $this->cofins = $cofins;
+        $this->csll = $csll;
+        $this->inss = $inss;
+        $this->ir = $ir;
+        $this->pis = $pis;
+        $this->iss = $iss;
+    }
+    /**
+     * Get The value of cofins
+     *
+     * @return  float
+     */
+    public function getCofins()
+    {
+        return $this->cofins;
+    }
+
+    /**
+     * set the value of cofins
+     *
+     * @param  float  $cofins
+     */
+    public function setCofins(float $cofins)
+    {
+        $this->cofins = $cofins;
+    }
+
+    /**
+     * Get The value of csll
+     *
+     * @return  float
+     */
+    public function getCsll()
+    {
+        return $this->csll;
+    }
+
+    /**
+     * set the value of csll
+     *
+     * @param  float  $csll
+     */
+    public function setCsll(float $csll)
+    {
+        $this->csll = $csll;
+    }
+
+    /**
+     * Get The value of inss
+     *
+     * @return  float
+     */
+    public function getInss()
+    {
+        return $this->inss;
+    }
+
+    /**
+     * set the value of inss
+     *
+     * @param  float  $inss
+     */
+    public function setInss(float $inss)
+    {
         $this->INSS = $inss;
-        $this->IR = $ir;
-        $this->PIS = $pis;
-        $this->ISS = $iss;
     }
+
     /**
-     * Get the value of COFINS
+     * Get The value of ir
      *
      * @return  float
      */
-    public function getCOFINS()
+    public function getIr()
     {
-        return $this->COFINS;
+        return $this->ir;
     }
 
     /**
-     * Set the value of COFINS
+     * set the value of ir
      *
-     * @param  float  $COFINS
+     * @param  float  $ir
      */
-    public function setCOFINS(float $COFINS)
+    public function setIr(float $ir)
     {
-        $this->COFINS = $COFINS;
+        $this->ir = $ir;
     }
 
     /**
-     * Get the value of CSLL
-     *
-     * @return  float
-     */
-    public function getCSLL()
-    {
-        return $this->CSLL;
-    }
-
-    /**
-     * Set the value of CSLL
-     *
-     * @param  float  $CSLL
-     */
-    public function setCSLL(float $CSLL)
-    {
-        $this->CSLL = $CSLL;
-    }
-
-    /**
-     * Get the value of INSS
+     * Get The value of pis
      *
      * @return  float
      */
-    public function getINSS()
+    public function getPis()
     {
-        return $this->INSS;
+        return $this->pis;
     }
 
     /**
-     * Set the value of INSS
+     * set the value of pis
      *
-     * @param  float  $INSS
+     * @param  float  $pis
      */
-    public function setINSS(float $INSS)
+    public function setPis(float $pis)
     {
-        $this->INSS = $INSS;
+        $this->pis = $pis;
     }
 
     /**
-     * Get the value of IR
-     *
-     * @return  float
-     */
-    public function getIR()
-    {
-        return $this->IR;
-    }
-
-    /**
-     * Set the value of IR
-     *
-     * @param  float  $IR
-     */
-    public function setIR(float $IR)
-    {
-        $this->IR = $IR;
-    }
-
-    /**
-     * Get the value of PIS
+     * Get The value of iss
      *
      * @return  float
      */
-    public function getPIS()
+    public function getIss()
     {
-        return $this->PIS;
+        return $this->iss;
     }
 
     /**
-     * Set the value of PIS
+     * set the value of iss
      *
-     * @param  float  $PIS
+     * @param  float  $iss
      */
-    public function setPIS(float $PIS)
+    public function setIss(float $iss)
     {
-        $this->PIS = $PIS;
-    }
-
-    /**
-     * Get the value of ISS
-     *
-     * @return  float
-     */
-    public function getISS()
-    {
-        return $this->ISS;
-    }
-
-    /**
-     * Set the value of ISS
-     *
-     * @param  float  $ISS
-     */
-    public function setISS(float $ISS)
-    {
-        $this->ISS = $ISS;
+        $this->iss = $iss;
     }
 }

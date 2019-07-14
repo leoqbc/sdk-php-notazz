@@ -26,7 +26,7 @@ class Service extends Resource
     protected $aliquotas;
 
     /**
-     * getThe value of SERVICE_LIST_LC116
+     * getThe value of service_list_lc116
      *
      * @return  int
      */
@@ -36,9 +36,9 @@ class Service extends Resource
     }
 
     /**
-     * Item da Lista de Serviço da LC 116.
+     * Item da Lista de Serviço da lc 116.
      *
-     * @param  int  $SERVICE_LIST_LC116
+     * @param  int  $service_list_lc116
      */
     public function setServiceListLc116(int $service_list_lc116)
     {
@@ -46,7 +46,7 @@ class Service extends Resource
     }
 
     /**
-     * Get The value of WITHHELD_ISS
+     * Get The value of withheld_iss
      *
      * @return  int
      */
@@ -106,7 +106,7 @@ class Service extends Resource
     }
 
     /**
-     * getThe value of ALIQUOTAS
+     * getThe value of aliquotas
      *
      * @return  array
      */
@@ -116,9 +116,9 @@ class Service extends Resource
     }
 
     /**
-     * Set the value of ALIQUOTAS
+     * Set the value of aliquotas
      *
-     * @param  array  $ALIQUOTAS
+     * @param  array  $aliquotas
      */
     public function setAliquotas(Aliquotas $aliquotas)
     {

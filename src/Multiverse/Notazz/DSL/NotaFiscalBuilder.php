@@ -31,6 +31,7 @@ class NotaFiscalBuilder
         $this->destination = new DestinationBuilder;
         $this->document = new DocumentBuilder;
         $this->products = new ProductsBuilder;
+        $this->service = new ServiceBuilder;
     }
 
     public function setRequestHandler($handler)
@@ -74,6 +75,12 @@ class NotaFiscalBuilder
         return $this;
     }
 
+    public function service()
+    {
+        $this->current = 'service';
+        return $this;
+    }
+
     public function isNFE() : bool
     {
         return (bool)$this->document->getDocumentType();
@@ -90,7 +97,8 @@ class NotaFiscalBuilder
         }
         return new NFSe(
             $this->destination->getInstance(),
-            $this->document->getInstance()
+            $this->document->getInstance(),
+            $this->service->getInstance()
         );
     }
 
