@@ -4,12 +4,44 @@ use Multiverse\Notazz\Resource;
 
 class ShippingVehicles extends Resource
 {
-    protected $DOCUMENT_FRETE_VEICULO_PLACA;
-    protected $DOCUMENT_FRETE_VEICULO_UF;
+    /**
+     * @var string
+     */
+    protected $document_frete_veiculo_placa;
+    /**
+     * @var string
+     */
+    protected $document_frete_veiculo_uf;
 
-    public function __construct(string $VEICULO_PLACA, string $VEICULO_UF)
+    /**
+     * Get the value of document_frete_veiculo_placa
+     */
+    public function getDocumentFreteVeiculoPlaca() : string
     {
-        $this->DOCUMENT_FRETE_VEICULO_PLACA = $VEICULO_PLACA;
-        $this->DOCUMENT_FRETE_VEICULO_UF = $VEICULO_UF;
+        return $this->document_frete_veiculo_placa;
+    }
+
+    /**
+     * Placa do veículo
+     */
+    public function setDocumentFreteVeiculoPlaca(string $document_frete_veiculo_placa)
+    {
+        $this->document_frete_veiculo_placa = $document_frete_veiculo_placa;
+    }
+
+    /**
+     * Get the value of document_frete_veiculo_uf
+     */
+    public function getDocumentFreteVeiculoUf() : string
+    {
+        return $this->document_frete_veiculo_uf;
+    }
+
+    /**
+     * Estado do veículo
+     */
+    public function setDocumentFreteVeiculoUf(string $document_frete_veiculo_uf)
+    {
+        $this->document_frete_veiculo_uf = $document_frete_veiculo_uf;
     }
 }
