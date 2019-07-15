@@ -7,6 +7,7 @@ use Multiverse\Notazz\NFSe;
 use Multiverse\Notazz\DSL\DestinationBuilder;
 use Multiverse\Notazz\DSL\DocumentBuilder;
 use Multiverse\Notazz\DSL\ProductsBuilder;
+use Multiverse\Notazz\DSL\ShippingBuilder;
 
 use GuzzleHttp\Client;
 
@@ -17,6 +18,8 @@ class NotaFiscalBuilder
     protected $document;
 
     protected $products;
+
+    protected $shipping;
 
     protected $current;
 
@@ -32,6 +35,7 @@ class NotaFiscalBuilder
         $this->document = new DocumentBuilder;
         $this->products = new ProductsBuilder;
         $this->service = new ServiceBuilder;
+        $this->shipping = new ShippingBuilder;
     }
 
     public function setRequestHandler($handler)
@@ -81,6 +85,12 @@ class NotaFiscalBuilder
         return $this;
     }
 
+    public function shipping()
+    {
+        $this->current = 'shipping';
+        return $this;
+    }
+
     public function isNFE() : bool
     {
         return (bool)$this->document->getDocumentType();
@@ -92,7 +102,8 @@ class NotaFiscalBuilder
             return new NFe(
                 $this->destination->getInstance(),
                 $this->document->getInstance(),
-                $this->products->getInstance()
+                $this->products->getInstance(),
+                $this->shipping->getInstance()
             );
         }
         return new NFSe(
