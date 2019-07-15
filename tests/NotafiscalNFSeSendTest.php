@@ -81,4 +81,49 @@ class NotaFiscalNFSeSendTest extends TestCase
 
         $this->assertEquals('{"statusProcessamento":"sucesso","codigoProcessamento":"000","id":"123"}', $result);
     }
+
+    public function testNotaFiscalBuilderIsNfseRemote()
+    {
+        $result = 
+            $this->notafiscal
+                ->key('123')
+                ->destination()
+                    ->name('John Doe')
+                    ->taxid('00000000272')
+                    ->taxtype('F')
+                    ->street('NÃO INFORMADO')
+                    ->number('S/N')
+                    ->district('NÃO INFORMADO')
+                    ->city('São Paulo')
+                    ->uf('SP')
+                    ->zipcode('02102000')
+                    ->email('teste@gmail.com')
+                    ->sendEmailList()
+                        ->add('teste1@gmail.com')
+                        ->add('teste2@gmail.com')
+                    ->end()
+                    ->phone(11955555555)
+                ->document()
+                    ->nfse()
+                    ->basevalue(1.10)
+                    ->description('Descrição teste')
+                    ->issue_date('2019-07-12 12:14:45')
+                ->service()
+                    ->description('Teste')
+                    ->listLc116(123)
+                    ->withheldIss(123)
+                    ->cityCode(123)
+                    ->aliquotas()
+                        ->cofins(1.0)
+                        ->csll(0.10)
+                        ->inss(2.01)
+                        ->ir(1.05)
+                        ->pis(0.5)
+                        ->iss(0.08)
+                    ->save()
+            ->make()
+        ;
+
+        $this->assertEquals('{"statusProcessamento":"erro","codigoProcessamento":"303","motivo":"Api Key invalido"}', $result);
+    }
 }

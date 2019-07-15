@@ -302,7 +302,7 @@ class FirstTest extends TestCase
 
         $this->assertEquals($result, $service->getArray());
     }
-
+  
     public function testDSLShippingVehiclesClassCouldBeFullFilledNFSE()
     {
         $shippingVehicles = new ShippingVehiclesBuilder;
