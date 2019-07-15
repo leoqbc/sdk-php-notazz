@@ -2,7 +2,6 @@
 
 use PHPUnit\Framework\TestCase;
 
-use Multiverse\Notazz\NotaFiscal;
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 use Multiverse\Notazz\DSL\Exceptions\CantAddEmailException;
 
@@ -11,6 +10,10 @@ use Multiverse\Notazz\DSL\DocumentBuilder;
 use Multiverse\Notazz\DSL\ProductsBuilder;
 use Multiverse\Notazz\DSL\AliquotasBuilder;
 use Multiverse\Notazz\DSL\ServiceBuilder;
+use Multiverse\Notazz\DSL\ShippingBuilder;
+use Multiverse\Notazz\DSL\ShippingVolumesBuilder;
+use Multiverse\Notazz\DSL\ShippingVehiclesBuilder;
+use Multiverse\Notazz\DSL\ShippingCarrierBuilder;
 
 class FirstTest extends TestCase
 { 
@@ -298,5 +301,128 @@ class FirstTest extends TestCase
         ];
 
         $this->assertEquals($result, $service->getArray());
+    }
+
+    public function testDSLShippingVehiclesClassCouldBeFullFilledNFSE()
+    {
+        $shippingVehicles = new ShippingVehiclesBuilder;
+
+        $result = [
+            "DOCUMENT_FRETE_VEICULO_PLACA" => "ZZZ1100",
+            "DOCUMENT_FRETE_VEICULO_UF" => "MG"
+        ];
+
+        $shippingVehicles
+            ->placa('ZZZ1100')
+            ->uf('MG')
+        ;
+
+        $this->assertEquals($result, $shippingVehicles->getArray());
+    }
+
+    public function testDSLShippingVolumesClassCouldBeFullFilledNFSE()
+    {
+        $shippingVolumes = new ShippingVolumesBuilder;
+
+        $result = [
+            "DOCUMENT_FRETE_VOLUMES_QTD" => "1",
+            "DOCUMENT_FRETE_VOLUMES_SPECIES" => "CAIXA",
+            "DOCUMENT_FRETE_VOLUMES_NET_WEIGHT" => "10.500",
+            "DOCUMENT_FRETE_VOLUMES_GROSS_WEIGHT" => "12.000"
+        ];
+
+        $shippingVolumes
+            ->qtd(1)
+            ->species('CAIXA')
+            ->netWeight(10.500)
+            ->grossWeight(12.000)
+        ;
+
+        $this->assertEquals($result, $shippingVolumes->getArray());
+    }
+
+    public function testDSLShippingCarrierClassCouldBeFullFilledNFSE()
+    {
+        $shippingCarrier = new ShippingCarrierBuilder;
+
+        $result = [
+            "DOCUMENT_FRETE_TRANSPORTADORA_NAME" => "Empresa Brasileira de Correios e Telégrafos",
+            "DOCUMENT_FRETE_TRANSPORTADORA_TAXID" => "34028316002742",
+            "DOCUMENT_FRETE_TRANSPORTADORA_IE" => "12345678",
+            "DOCUMENT_FRETE_TRANSPORTADORA_STREET" => "Rua de teste",
+            "DOCUMENT_FRETE_TRANSPORTADORA_NUMBER" => "123",
+            "DOCUMENT_FRETE_TRANSPORTADORA_DISTRICT" => "Centro",
+            "DOCUMENT_FRETE_TRANSPORTADORA_CITY" => "Belo Horizonte",
+            "DOCUMENT_FRETE_TRANSPORTADORA_UF" => "MG"
+        ];
+
+        $shippingCarrier
+            ->name('Empresa Brasileira de Correios e Telégrafos')
+            ->taxid('34028316002742')
+            ->ie(12345678)
+            ->street('Rua de teste')
+            ->number(123)
+            ->district('Centro')
+            ->city('Belo Horizonte')
+            ->uf('MG')
+        ;
+
+        $this->assertEquals($result, $shippingCarrier->getArray());
+    }
+
+    public function testDSLShippingClassCouldBeFullFilledNFSE()
+    {
+        $shipping = new ShippingBuilder;
+
+        $result = [
+            "DOCUMENT_FRETE" => [
+                "DOCUMENT_FRETE_MOD" => "0",
+                "DOCUMENT_FRETE_VALUE" => "100.00",
+                "DOCUMENT_FRETE_TRANSPORTADORA" => [
+                    "DOCUMENT_FRETE_TRANSPORTADORA_NAME" => "Empresa Brasileira de Correios e Telégrafos",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_TAXID" => "34028316002742",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_IE" => "12345678",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_STREET" => "Rua de teste",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_NUMBER" => "123",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_DISTRICT" => "Centro",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_CITY" => "Belo Horizonte",
+                    "DOCUMENT_FRETE_TRANSPORTADORA_UF" => "MG"
+                ],
+                "DOCUMENT_FRETE_VEICULO" => [
+                    "DOCUMENT_FRETE_VEICULO_PLACA" => "ZZZ1100",
+                    "DOCUMENT_FRETE_VEICULO_UF" => "MG"
+                ],
+                "DOCUMENT_FRETE_VOLUMES" => [
+                    "DOCUMENT_FRETE_VOLUMES_QTD" => "1",
+                    "DOCUMENT_FRETE_VOLUMES_SPECIES" => "CAIXA",
+                    "DOCUMENT_FRETE_VOLUMES_NET_WEIGHT" => "10.500",
+                    "DOCUMENT_FRETE_VOLUMES_GROSS_WEIGHT" => "12.000"
+                ]
+            ]
+        ];
+
+        $shipping
+            ->value(100.00)
+            ->mode(0)
+            ->vehicles()
+                ->placa('ZZZ1100')
+                ->uf('MG')
+            ->volumes()
+                ->qtd(1)
+                ->species('CAIXA')
+                ->netWeight(10.500)
+                ->grossWeight(12.000)
+            ->carrier()
+                ->name('Empresa Brasileira de Correios e Telégrafos')
+                ->taxid('34028316002742')
+                ->ie(12345678)
+                ->street('Rua de teste')
+                ->number(123)
+                ->district('Centro')
+                ->city('Belo Horizonte')
+                ->uf('MG')    
+        ->save();
+        
+        $this->assertEquals($result, $shipping->getArray());
     }
 }

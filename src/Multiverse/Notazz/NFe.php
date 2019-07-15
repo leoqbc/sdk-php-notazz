@@ -47,7 +47,7 @@ class NFe
      */
     public function mount(): array
     {
-        if ($this->shipping === null) {
+        if (false === $this->hasShipping()) {
             return array_merge(
                 $this->document->toArray(),
                 $this->destination->toArray(),
@@ -61,5 +61,23 @@ class NFe
             $this->products->toArray(),
             $this->shipping->toArray()
         );
+    }
+
+    /**
+     * @return bool
+     */
+    protected function hasShipping()
+    {
+        if ($this->shipping === null) {
+            return false;
+        }
+
+        $frete = $this->shipping->toArray();
+        
+        if (count($frete['DOCUMENT_FRETE']) === 0) {
+            return false;
+        }
+
+        return true;
     }
 }

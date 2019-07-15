@@ -5,7 +5,7 @@ class Shipping
     /**
      * @var array
      */
-    protected $document_frete = [];
+    protected $document_frete;
     /**
      * @var int
      */
@@ -46,7 +46,10 @@ class Shipping
     }
 
     /**
-     * Set the value of document_frete_mod
+     * 0 = Por conta do emitente
+     * 1 = Por conta do destinatário / remetente
+     * 2 = Por conta de terceiros
+     * 9 = Sem frete
      *
      * @param  int  $document_frete_mod
 
