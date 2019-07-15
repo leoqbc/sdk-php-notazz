@@ -52,7 +52,7 @@ $result =
                 ->qtd(1)
                 ->unitary_value(55.10)
             ->save()
-		->shipping()
+        ->shipping()
             ->value(100.00)
             ->mode(0)
             ->vehicles()
