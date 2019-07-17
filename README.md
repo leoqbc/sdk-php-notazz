@@ -1,5 +1,8 @@
 # SDK PHP Notazz
 [![Build Status](https://travis-ci.org/leoqbc/sdk-php-notazz.svg?branch=master)](https://travis-ci.org/leoqbc/sdk-php-notazz)
+[![Latest Stable Version](https://poser.pugx.org/multiverse/notazzsdk/v/stable)](https://packagist.org/packages/multiverse/notazzsdk)
+[![Total Downloads](https://poser.pugx.org/multiverse/notazzsdk/downloads)](https://packagist.org/packages/multiverse/notazzsdk)
+[![License](https://poser.pugx.org/multiverse/notazzsdk/license)](https://packagist.org/packages/multiverse/notazzsdk)
 
 SDK e DSL em PHP para emissão de nota fiscal NFE e NFSE
 
@@ -82,7 +85,6 @@ $result =
 use Multiverse\Notazz\DSL\NotaFiscalBuilder;
 
 $result = $this->notafiscal
-            ->setRequestHandler($client)
             ->key('123')
             ->destination()
                 ->name('Leonardo Tumadjian')
