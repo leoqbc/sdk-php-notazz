@@ -37,10 +37,11 @@ class Service extends Resource
 
     /**
      * Item da Lista de Serviço da lc 116.
+     * Ex: 17.06
      *
      * @param  int  $service_list_lc116
      */
-    public function setServiceListLc116(int $service_list_lc116)
+    public function setServiceListLc116(float $service_list_lc116)
     {
         $this->service_list_lc116 = $service_list_lc116;
     }
