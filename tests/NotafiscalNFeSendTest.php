@@ -100,6 +100,12 @@ class NotaFiscalNFeSendTest extends TestCase
             ->make()
         ;
 
-        $this->assertEquals('{"statusProcessamento":"sucesso","codigoProcessamento":"000","id":"123"}', $result);
+        $expectedResult = new \stdClass;
+
+        $expectedResult->statusProcessamento = 'sucesso';
+        $expectedResult->codigoProcessamento = '000';
+        $expectedResult->id = '123';
+
+        $this->assertEquals($expectedResult, $result);
     }
 }
