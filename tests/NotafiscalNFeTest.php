@@ -4,6 +4,10 @@ use PHPUnit\Framework\TestCase;
 
 use Multiverse\Notazz\DSL\NotaFiscalBuilder;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Stream;
+
 class NotaFiscalNFeTest extends TestCase
 {
     protected $notafiscal;
@@ -17,8 +21,24 @@ class NotaFiscalNFeTest extends TestCase
 
     public function testNotaFiscalBuilderIsNFE()
     {
+        $client = $this->createMock(Client::class);
+
+        $response = $this->createMock(Response::class);
+        
+        $stream = $this->createMock(Stream::class);
+
+        $client->method('request')
+                ->willReturn($response);
+
+        $response->method('getBody')
+                ->willReturn($stream);
+
+        $stream->method('getContents')
+                ->willReturn('{"statusProcessamento":"sucesso","codigoProcessamento":"000","id":"123"}');
+
         $this->notafiscal
-                ->key('123')
+              ->setRequestHandler($client)
+              ->key('123')
                 ->destination()
                     ->name('John Doe')
                     ->taxid('00000000272')
@@ -60,7 +80,23 @@ class NotaFiscalNFeTest extends TestCase
 
     public function testNotafiscalBuilderJsonValidated()
     {
+        $client = $this->createMock(Client::class);
+
+        $response = $this->createMock(Response::class);
+        
+        $stream = $this->createMock(Stream::class);
+
+        $client->method('request')
+                ->willReturn($response);
+
+        $response->method('getBody')
+                ->willReturn($stream);
+
+        $stream->method('getContents')
+                ->willReturn('{"statusProcessamento":"sucesso","codigoProcessamento":"000","id":"123"}');
+
         $this->notafiscal
+                ->setRequestHandler($client)
                 ->key('123')
                 ->destination()
                     ->name('John Doe')
