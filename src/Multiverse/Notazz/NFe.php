@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz;
+<?php
+
+namespace Multiverse\Notazz;
 
 use Multiverse\Notazz\NFe\Document;
 use Multiverse\Notazz\NFe\Products;

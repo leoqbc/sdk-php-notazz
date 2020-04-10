@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFSe;
+<?php
+
+namespace Multiverse\Notazz\NFSe;
 
 use Multiverse\Notazz\Resource;
 
@@ -55,7 +57,7 @@ class Aliquotas extends Resource
     /**
      * Get The value of cofins
      *
-     * @return  float
+     * @return float
      */
     public function getCofins()
     {
@@ -65,7 +67,7 @@ class Aliquotas extends Resource
     /**
      * set the value of cofins
      *
-     * @param  float  $cofins
+     * @param float $cofins
      */
     public function setCofins(float $cofins)
     {
@@ -75,7 +77,7 @@ class Aliquotas extends Resource
     /**
      * Get The value of csll
      *
-     * @return  float
+     * @return float
      */
     public function getCsll()
     {
@@ -85,7 +87,7 @@ class Aliquotas extends Resource
     /**
      * set the value of csll
      *
-     * @param  float  $csll
+     * @param float $csll
      */
     public function setCsll(float $csll)
     {
@@ -95,7 +97,7 @@ class Aliquotas extends Resource
     /**
      * Get The value of inss
      *
-     * @return  float
+     * @return float
      */
     public function getInss()
     {
@@ -105,7 +107,7 @@ class Aliquotas extends Resource
     /**
      * set the value of inss
      *
-     * @param  float  $inss
+     * @param float $inss
      */
     public function setInss(float $inss)
     {
@@ -115,7 +117,7 @@ class Aliquotas extends Resource
     /**
      * Get The value of ir
      *
-     * @return  float
+     * @return float
      */
     public function getIr()
     {
@@ -125,7 +127,7 @@ class Aliquotas extends Resource
     /**
      * set the value of ir
      *
-     * @param  float  $ir
+     * @param float $ir
      */
     public function setIr(float $ir)
     {
@@ -135,7 +137,7 @@ class Aliquotas extends Resource
     /**
      * Get The value of pis
      *
-     * @return  float
+     * @return float
      */
     public function getPis()
     {
@@ -145,7 +147,7 @@ class Aliquotas extends Resource
     /**
      * set the value of pis
      *
-     * @param  float  $pis
+     * @param float $pis
      */
     public function setPis(float $pis)
     {
@@ -155,7 +157,7 @@ class Aliquotas extends Resource
     /**
      * Get The value of iss
      *
-     * @return  float
+     * @return float
      */
     public function getIss()
     {
@@ -165,7 +167,7 @@ class Aliquotas extends Resource
     /**
      * set the value of iss
      *
-     * @param  float  $iss
+     * @param float $iss
      */
     public function setIss(float $iss)
     {

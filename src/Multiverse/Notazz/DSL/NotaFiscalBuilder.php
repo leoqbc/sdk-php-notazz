@@ -1,14 +1,14 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NotaFiscal;
 use Multiverse\Notazz\NFe;
 use Multiverse\Notazz\NFSe;
-
 use Multiverse\Notazz\DSL\DestinationBuilder;
 use Multiverse\Notazz\DSL\DocumentBuilder;
 use Multiverse\Notazz\DSL\ProductsBuilder;
 use Multiverse\Notazz\DSL\ShippingBuilder;
-
 use GuzzleHttp\Client;
 
 class NotaFiscalBuilder
@@ -29,13 +29,13 @@ class NotaFiscalBuilder
 
     public function __construct()
     {
-        $this->handler = new Client;
+        $this->handler = new Client();
 
-        $this->destination = new DestinationBuilder;
-        $this->document = new DocumentBuilder;
-        $this->products = new ProductsBuilder;
-        $this->service = new ServiceBuilder;
-        $this->shipping = new ShippingBuilder;
+        $this->destination = new DestinationBuilder();
+        $this->document = new DocumentBuilder();
+        $this->products = new ProductsBuilder();
+        $this->service = new ServiceBuilder();
+        $this->shipping = new ShippingBuilder();
     }
 
     public function setRequestHandler($handler)
@@ -91,7 +91,7 @@ class NotaFiscalBuilder
         return $this;
     }
 
-    public function isNFE() : bool
+    public function isNFE(): bool
     {
         return (bool)$this->document->getDocumentType();
     }

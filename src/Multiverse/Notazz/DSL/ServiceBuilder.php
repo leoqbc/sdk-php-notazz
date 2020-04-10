@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFSe\Service;
 
@@ -12,8 +14,8 @@ class ServiceBuilder
 
     public function __construct()
     {
-        $this->service = new Service;
-        $this->aliquotasBuilder = new AliquotasBuilder;
+        $this->service = new Service();
+        $this->aliquotasBuilder = new AliquotasBuilder();
     }
     
     public function __call(string $method, array $args)
@@ -58,12 +60,12 @@ class ServiceBuilder
         return $this;
     }
 
-    public function getArray() : array
+    public function getArray(): array
     {
         return $this->service->toArray();
     }
 
-    public function getInstance() : Service
+    public function getInstance(): Service
     {
         return $this->service;
     }

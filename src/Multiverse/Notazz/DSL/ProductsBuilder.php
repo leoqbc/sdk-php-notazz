@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFe\Products;
 use Multiverse\Notazz\NFe\ProductItem;
@@ -15,7 +17,7 @@ class ProductsBuilder
     
     public function __construct()
     {
-        $this->products = new Products;
+        $this->products = new Products();
     }
 
     public function __call(string $method, array $args)
@@ -61,17 +63,17 @@ class ProductsBuilder
         $this->adding = $adding;
     }
 
-    protected function isAdding() : bool
+    protected function isAdding(): bool
     {
         return $this->adding;
     }
 
-    protected function makeProductItemInstance() : ProductItem
+    protected function makeProductItemInstance(): ProductItem
     {
         if ($this->productItem instanceof ProductItem) {
             return $this->productItem;
         }
-        return new ProductItem;
+        return new ProductItem();
     }
 
     public function getInstance()

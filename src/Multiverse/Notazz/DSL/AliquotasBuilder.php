@@ -1,7 +1,8 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFSe\Aliquotas;
-
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 use Multiverse\Notazz\DSL\Tools\Formatter;
 
@@ -11,7 +12,7 @@ class AliquotasBuilder
     
     public function __construct()
     {
-        $this->aliquotas = new Aliquotas;
+        $this->aliquotas = new Aliquotas();
     }
 
     public function __call(string $method, array $args)
@@ -28,12 +29,12 @@ class AliquotasBuilder
         return $this;
     }
 
-    public function getInstance() : Aliquotas
+    public function getInstance(): Aliquotas
     {
         return $this->aliquotas;
     }
 
-    public function getArray() : array
+    public function getArray(): array
     {
         return $this->aliquotas->toArray();
     }
