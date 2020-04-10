@@ -7,7 +7,7 @@ use Multiverse\Notazz\DSL\NotaFiscalBuilder;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
-use Multiverse\Notazz\ErrorStatusProcessamentoException;
+use Multiverse\Notazz\Exceptions\ErrorStatusProcessamentoException;
 
 class NotaFiscalNFSeSendTest extends TestCase
 {
@@ -93,7 +93,23 @@ class NotaFiscalNFSeSendTest extends TestCase
     {
         $this->expectException(ErrorStatusProcessamentoException::class);
 
+        $client = $this->createMock(Client::class);
+
+        $response = $this->createMock(Response::class);
+        
+        $stream = $this->createMock(Stream::class);
+
+        $client->method('request')
+                ->willReturn($response);
+
+        $response->method('getBody')
+                ->willReturn($stream);
+
+        $stream->method('getContents')
+                ->willReturn('{"statusProcessamento":"erro","motivo": "Erro ao processar"}');
+
         $this->notafiscal
+            ->setRequestHandler($client)
             ->key('123')
             ->destination()
                 ->name('John Doe')
