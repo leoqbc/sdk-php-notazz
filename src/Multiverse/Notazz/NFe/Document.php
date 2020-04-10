@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFe;
+<?php
+
+namespace Multiverse\Notazz\NFe;
 
 use Multiverse\Notazz\Resource;
 
@@ -46,7 +48,7 @@ class Document extends Resource
 
     /**
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentBasevalue()
     {
@@ -56,7 +58,7 @@ class Document extends Resource
     /**
      * Valor da nota fiscal
      *
-     * @param  float  $document_basevalue
+     * @param float $document_basevalue
      */
     public function setDocumentBasevalue(float $document_basevalue)
     {
@@ -66,7 +68,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_CNAE
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentCnae()
     {
@@ -76,9 +78,9 @@ class Document extends Resource
     /**
      * CNAE. Documentação: http://www.cnae.ibge.gov.br
      *
-     * @param  int  $document_cnae
+     * @param int $document_cnae
      *
-     * @return  self
+     * @return self
      */
     public function setDocumentCnae(int $document_cnae)
     {
@@ -90,7 +92,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_GOAL
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentGoal()
     {
@@ -100,7 +102,7 @@ class Document extends Resource
     /**
      * Finalidade da Nota Fiscal. 1 = Normal, 2 = Complementar, 3 = Ajuste, 4 = Devolução/Retorno
      *
-     * @param  int  $document_goal
+     * @param int $document_goal
      */
     public function setDocumentGoal(int $document_goal)
     {
@@ -110,7 +112,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_REFERENCED
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentReferenced()
     {
@@ -120,7 +122,7 @@ class Document extends Resource
     /**
      * Chave da nota fiscal referenciada. Utilizar quando DOCUMENT_GOAL for diferente de 1
      *
-     * @param  int  $document_referenced
+     * @param int $document_referenced
      */
     public function setDocumentReferenced(int $document_referenced)
     {
@@ -130,7 +132,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_OPERATION_TYPE
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentOperationType()
     {
@@ -140,7 +142,7 @@ class Document extends Resource
     /**
      * Tipo de Operação. 0 = Entrada, 1 = Saída
      *
-     * @param  int  $document_operation_type
+     * @param int $document_operation_type
      */
     public function setDocumentOperationType(int $document_operation_type)
     {
@@ -150,7 +152,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_NATURE_OPERATION
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentNatureOperation()
     {
@@ -160,7 +162,7 @@ class Document extends Resource
     /**
      * Natureza da operação da nota fiscal
      *
-     * @param  string  $document_nature_operation
+     * @param string $document_nature_operation
      */
     public function setDocumentNatureOperation(string $document_nature_operation)
     {
@@ -170,7 +172,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_DESCRIPTION
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentDescription()
     {
@@ -180,7 +182,7 @@ class Document extends Resource
     /**
      * Descrição da nota fiscal
      *
-     * @param  string  $document_description
+     * @param string $document_description
      */
     public function setDocumentDescription(string $document_description)
     {
@@ -190,7 +192,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_ISSUE_DATE
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentIssueDate()
     {
@@ -200,8 +202,7 @@ class Document extends Resource
     /**
      * Data de emissão automática da nota fiscal (por padrão é a data atual) formato YYYY-mm-dd HH:ii:ss
      *
-     * @param  string  $document_issue_date
-     *
+     * @param string $document_issue_date
      */
     public function setDocumentIssueDate(string $document_issue_date)
     {

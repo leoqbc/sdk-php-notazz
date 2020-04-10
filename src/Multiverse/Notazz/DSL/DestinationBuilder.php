@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\Destination;
 use Multiverse\Notazz\DSL\Tools\Formatter;
@@ -15,7 +17,7 @@ class DestinationBuilder
 
     public function __construct()
     {
-        $this->destination = new Destination;
+        $this->destination = new Destination();
     }
     
     public function __call(string $method, array $args)

@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\Exceptions;
+<?php
+
+namespace Multiverse\Notazz\Exceptions;
 
 use Exception;
 

@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFe;
+<?php
+
+namespace Multiverse\Notazz\NFe;
 
 use Multiverse\Notazz\Resource;
 
@@ -40,7 +42,8 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_name
      * No
-     * @return  string
+     *
+     * @return string
      */
     public function getDocumentFreteTransportadoraName()
     {
@@ -50,7 +53,7 @@ class ShippingCarrier extends Resource
     /**
      * Nome ou Razão Social da transportadora
      *
-     * @param  string  $document_frete_transportadora_name
+     * @param string $document_frete_transportadora_name
      */
     public function setDocumentFreteTransportadoraName(string $document_frete_transportadora_name)
     {
@@ -60,7 +63,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_taxid
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentFreteTransportadoraTaxid()
     {
@@ -70,8 +73,7 @@ class ShippingCarrier extends Resource
     /**
      * CPF / CNPJ
      *
-     * @param  string  $document_frete_transportadora_taxid
-     *
+     * @param string $document_frete_transportadora_taxid
      */
     public function setDocumentFreteTransportadoraTaxid(string $document_frete_transportadora_taxid)
     {
@@ -81,7 +83,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_ie
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentFreteTransportadoraIe()
     {
@@ -91,8 +93,7 @@ class ShippingCarrier extends Resource
     /**
      * Inscrição estadual
      *
-     * @param  int  $document_frete_transportadora_ie
-     *
+     * @param int $document_frete_transportadora_ie
      */
     public function setDocumentFreteTransportadoraIe(int $document_frete_transportadora_ie)
     {
@@ -102,7 +103,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_street
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentFreteTransportadoraStreet()
     {
@@ -112,9 +113,7 @@ class ShippingCarrier extends Resource
     /**
      * Logradouro
      *
-     * @param  string  $document_frete_transportadora_street
-     *
-
+     * @param string $document_frete_transportadora_street
      */
     public function setDocumentFreteTransportadoraStreet(string $document_frete_transportadora_street)
     {
@@ -124,7 +123,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_number
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentFreteTransportadoraNumber()
     {
@@ -134,7 +133,7 @@ class ShippingCarrier extends Resource
     /**
      * Número
      *
-     * @param  string  $document_frete_transportadora_number
+     * @param string $document_frete_transportadora_number
      */
     public function setDocumentFreteTransportadoraNumber(string $document_frete_transportadora_number)
     {
@@ -144,7 +143,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_district
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentFreteTransportadoraDistrict()
     {
@@ -154,7 +153,7 @@ class ShippingCarrier extends Resource
     /**
      * Bairro
      *
-     * @param  string  $document_frete_transportadora_district
+     * @param string $document_frete_transportadora_district
      */
     public function setDocumentFreteTransportadoraDistrict(string $document_frete_transportadora_district)
     {
@@ -164,7 +163,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_city
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentFreteTransportadoraCity()
     {
@@ -174,7 +173,7 @@ class ShippingCarrier extends Resource
     /**
      * Cidade
      *
-     * @param  string  $document_frete_transportadora_city
+     * @param string $document_frete_transportadora_city
      */
     public function setDocumentFreteTransportadoraCity(string $document_frete_transportadora_city)
     {
@@ -184,7 +183,7 @@ class ShippingCarrier extends Resource
     /**
      * Get the value of document_frete_transportadora_uf
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentFreteTransportadoraUf()
     {
@@ -194,7 +193,7 @@ class ShippingCarrier extends Resource
     /**
      * UF
      *
-     * @param  string  $document_frete_transportadora_uf
+     * @param string $document_frete_transportadora_uf
      */
     public function setDocumentFreteTransportadoraUf(string $document_frete_transportadora_uf)
     {

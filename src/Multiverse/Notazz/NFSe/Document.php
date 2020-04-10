@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFSe;
+<?php
+
+namespace Multiverse\Notazz\NFSe;
 
 use Multiverse\Notazz\Resource;
 
@@ -35,7 +37,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_BASEVALUE
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentBasevalue()
     {
@@ -45,8 +47,7 @@ class Document extends Resource
     /**
      * Valor da nota fiscal
      *
-     * @param  float  $document_basevalue
-     *
+     * @param float $document_basevalue
      */
     public function setDocumentBasevalue(float $document_basevalue)
     {
@@ -56,7 +57,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_DESCRIPTION
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentDescription()
     {
@@ -66,7 +67,7 @@ class Document extends Resource
     /**
      * Descrição da nota fiscal
      *
-     * @param  string  $document_description
+     * @param string $document_description
      */
     public function setDocumentDescription(string $document_description)
     {
@@ -76,7 +77,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_COMPETENCE
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentCompetence()
     {
@@ -86,7 +87,7 @@ class Document extends Resource
     /**
      * Competência. Utilizar padrão: YYYY-mm-dd
      *
-     * @param  string  $document_competence
+     * @param string $document_competence
      */
     public function setDocumentCompetence(string $document_competence)
     {
@@ -96,7 +97,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_CNAE
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentCnae()
     {
@@ -106,7 +107,7 @@ class Document extends Resource
     /**
      *  CNAE. Documentação: http://www.cnae.ibge.gov.br
      *
-     * @param  int  $document_cnae
+     * @param int $document_cnae
      */
     public function setDocumentCnae(int $document_cnae)
     {
@@ -116,7 +117,7 @@ class Document extends Resource
     /**
      * Get the value of DOCUMENT_ISSUE_DATE
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentIssueDate()
     {
@@ -126,7 +127,7 @@ class Document extends Resource
     /**
      * Data de emissão automática da nota fiscal (por padrão é a data atual) formato YYYY-mm-dd HH:ii:ss
      *
-     * @param  string  $document_issue_date
+     * @param string $document_issue_date
      */
     public function setDocumentIssueDate(string $document_issue_date)
     {

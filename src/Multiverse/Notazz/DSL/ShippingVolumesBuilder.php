@@ -1,7 +1,8 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFe\ShippingVolumes;
-
 use Multiverse\Notazz\DSL\Tools\Formatter;
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 
@@ -11,7 +12,7 @@ class ShippingVolumesBuilder
 
     public function __construct()
     {
-        $this->shippingVolumes = new ShippingVolumes;
+        $this->shippingVolumes = new ShippingVolumes();
     }
     
     public function __call(string $method, array $args)
