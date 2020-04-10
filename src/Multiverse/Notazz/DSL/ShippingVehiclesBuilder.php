@@ -1,7 +1,8 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFe\ShippingVehicles;
-
 use Multiverse\Notazz\DSL\Tools\Formatter;
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 
@@ -11,7 +12,7 @@ class ShippingVehiclesBuilder
 
     public function __construct()
     {
-        $this->shippingVehicles = new ShippingVehicles;
+        $this->shippingVehicles = new ShippingVehicles();
     }
     
     public function __call(string $method, array $args)

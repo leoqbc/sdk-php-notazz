@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\DSL\Exceptions;
+<?php
+
+namespace Multiverse\Notazz\DSL\Exceptions;
 
 use Exception;
 

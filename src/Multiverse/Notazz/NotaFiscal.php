@@ -1,10 +1,12 @@
-<?php namespace Multiverse\Notazz;
+<?php
+
+namespace Multiverse\Notazz;
 
 use Multiverse\Notazz\Exceptions\ErrorStatusProcessamentoException;
 
 class NotaFiscal
 {
-    const API_URL = 'https://app.notazz.com/api';
+    public const API_URL = 'https://app.notazz.com/api';
 
     /**
      * @var string
@@ -63,7 +65,9 @@ class NotaFiscal
     {
         try {
             $response = $this->handler->request('POST', self::API_URL, [
-                'form_params' => ["fields" => $this->prepareRequest()],
+                'form_params' => [
+                    "fields" => $this->prepareRequest()
+                ],
                 false
             ]);
 
@@ -95,49 +99,3 @@ class NotaFiscal
         return json_encode($this->nota);
     }
 }
-
-/**
- * NFS-e
- *  - API_KEY
- *  - METHOD
- *  - DESTINATION_NAME
- *  - DESTINATION_TAXID
- *  - DESTINATION_TAXTYPE
- *  - DESTINATION_STREET
- *  - DESTINATION_NUMBER
- *  - DESTINATION_DISTRICT
- *  - DISTINATION_CITY
- *  - DESTINATION_UF
- *  - DESTINATION_ZIPCODE
- *  - DESTINATION_EMAIL_SEND
- *  - DESTINATION_EMAIL
- *  - DESTINATION_PHONE
- *  - DOCUMENT_BASEVALUE
- *  - DOCUMENT_DESCRIPTION
- *  - DOCUMENT_COMPETENCE
- *  - DOCUMENT_ISSUE_DATE
- *
- * NF-e
- *  - API_KEY
- *  - METHOD
- *  - DESTINATION_NAME
- *  - DESTINATION_TAXID
- *  - DESTINATION_TAXTYPE
- *  - DESTINATION_STREET
- *  - DESTINATION_NUMBER
- *  - DESTINATION_DISTRICT
- *  - DISTINATION_CITY
- *  - DESTINATION_UF
- *  - DESTINATION_ZIPCODE
- *  - DESTINATION_EMAIL_SEND
- *  - DESTINATION_EMAIL
- *  - DESTINATION_PHONE
- *  - DOCUMENT_BASEVALUE
- *  - DOCUMENT_DESCRIPTION
- *  - DOCUMENT_ISSUE_DATE
- *  - DOCUMENT_PRODUCT
- *  - DOCUMENT_PRODUCT_COD
- *  - DOCUMENT_PRODUCT_NAME
- *  - DOCUMENT_PRODUCT_QTD
- *  - DOCUMENT_PRODUCT_UNITARY_VALUE
- */

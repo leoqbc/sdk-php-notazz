@@ -1,11 +1,13 @@
-<?php namespace Multiverse\Notazz;
+<?php
+
+namespace Multiverse\Notazz;
 
 class Resource
 {
     /**
      * @return array
      */
-    public function toArray() : array
+    public function toArray(): array
     {
         $array = [];
         foreach ($this as $key => $value) {
