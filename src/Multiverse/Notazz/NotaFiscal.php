@@ -1,5 +1,7 @@
 <?php namespace Multiverse\Notazz;
 
+use Multiverse\Notazz\Exceptions\ErrorStatusProcessamentoException;
+
 class NotaFiscal
 {
     const API_URL = 'https://app.notazz.com/api';
