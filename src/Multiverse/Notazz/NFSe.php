@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz;
+<?php
+
+namespace Multiverse\Notazz;
 
 use Multiverse\Notazz\NFSe\Document;
 use Multiverse\Notazz\NFSe\Service;
@@ -39,7 +41,7 @@ class NFSe
      *
      * @return array
      */
-    public function mount() : array
+    public function mount(): array
     {
         if ($this->service === null) {
             return array_merge(

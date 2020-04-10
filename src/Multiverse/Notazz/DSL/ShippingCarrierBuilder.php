@@ -1,7 +1,8 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFe\ShippingCarrier;
-
 use Multiverse\Notazz\DSL\Tools\Formatter;
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 
@@ -11,7 +12,7 @@ class ShippingCarrierBuilder
 
     public function __construct()
     {
-        $this->shippingCarrier = new ShippingCarrier;
+        $this->shippingCarrier = new ShippingCarrier();
     }
     
     public function __call(string $method, array $args)

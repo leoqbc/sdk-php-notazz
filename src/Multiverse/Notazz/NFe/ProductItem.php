@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFe;
+<?php
+
+namespace Multiverse\Notazz\NFe;
 
 use Multiverse\Notazz\Resource;
 
@@ -85,7 +87,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_COD
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductCod()
     {
@@ -95,7 +97,7 @@ class ProductItem extends Resource
     /**
      * Cód do produto
      *
-     * @param  int  $document_product_cod
+     * @param int $document_product_cod
      */
     public function setDocumentProductCod(int $document_product_cod)
     {
@@ -105,7 +107,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_TAX_COD
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductTaxCod()
     {
@@ -115,7 +117,7 @@ class ProductItem extends Resource
     /**
      * Cód fiscal do produto (código da logística)
      *
-     * @param  int  $document_product_tax_cod
+     * @param int $document_product_tax_cod
      */
     public function setDocumentProductTaxCod(int $document_product_tax_cod)
     {
@@ -125,7 +127,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_EAN
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentProductEan()
     {
@@ -135,7 +137,7 @@ class ProductItem extends Resource
     /**
      * Código de barras
      *
-     * @param  mixed  $document_product_ean
+     * @param mixed $document_product_ean
      */
     public function setDocumentProductEan($document_product_ean)
     {
@@ -145,7 +147,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_NAME
      *
-     * @return  string
+     * @return string
      */
     public function getDocumentProductName()
     {
@@ -155,7 +157,7 @@ class ProductItem extends Resource
     /**
      * Nome do produto
      *
-     * @param  string  $document_product_name
+     * @param string $document_product_name
      */
     public function setDocumentProductName(string $document_product_name)
     {
@@ -165,7 +167,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_QTD
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductQtd()
     {
@@ -175,7 +177,7 @@ class ProductItem extends Resource
     /**
      * Quantidade de itens
      *
-     * @param  int  $document_product_qtd
+     * @param int $document_product_qtd
      */
     public function setDocumentProductQtd(int $document_product_qtd)
     {
@@ -185,7 +187,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_UNITARY_VALUE
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductUnitaryValue()
     {
@@ -195,7 +197,7 @@ class ProductItem extends Resource
     /**
      * Valor unitário do item
      *
-     * @param  float  $document_product_unitary_value
+     * @param float $document_product_unitary_value
      */
     public function setDocumentProductUnitaryValue(float $document_product_unitary_value)
     {
@@ -205,7 +207,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_NCM
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductNcm()
     {
@@ -215,7 +217,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_NCM
      *
-     * @param  int  $document_product_ncm
+     * @param int $document_product_ncm
      */
     public function setDocumentProductNcm(int $document_product_ncm)
     {
@@ -225,7 +227,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_CEST
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductCest()
     {
@@ -235,7 +237,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_CEST
      *
-     * @param  int  $document_product_cest
+     * @param int $document_product_cest
      */
     public function setDocumentProductCest(int $document_product_cest)
     {
@@ -245,7 +247,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_CFOP
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductCfop()
     {
@@ -255,7 +257,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_CFOP
      *
-     * @param  int  $document_product_cfop
+     * @param int $document_product_cfop
      */
     public function setDocumentProductCfop(int $document_product_cfop)
     {
@@ -265,7 +267,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_DISCOUNT
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductDiscount()
     {
@@ -275,7 +277,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_DISCOUNT
      *
-     * @param  float  $document_product_discount
+     * @param float $document_product_discount
      */
     public function setDocumentProductDiscount(float $document_product_discount)
     {
@@ -285,7 +287,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_ICMS_CST
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductIcmsCst()
     {
@@ -295,7 +297,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_ICMS_CST
      *
-     * @param  int  $document_product_icms_cst
+     * @param int $document_product_icms_cst
      */
     public function setDocumentProductIcmsCst(int $document_product_icms_cst)
     {
@@ -305,7 +307,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_ICMS_ALIQUOTA
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductIcmsAliquota()
     {
@@ -315,7 +317,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_ICMS_ALIQUOTA
      *
-     * @param  float  $document_product_icms_aliquota
+     * @param float $document_product_icms_aliquota
      */
     public function setDocumentProductIcmsAliquota(float $document_product_icms_aliquota)
     {
@@ -325,7 +327,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_IPI_CST
      *
-     * @return  int
+     * @return int
      */
     public function getDocumentProductIpiCst()
     {
@@ -335,7 +337,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_IPI_CST
      *
-     * @param  int  $document_product_ipi_cst
+     * @param int $document_product_ipi_cst
      */
     public function setDocumentProductIpiCst(int $document_product_ipi_cst)
     {
@@ -345,7 +347,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_IPI_ALIQUOTA
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductIpiAliquota()
     {
@@ -355,7 +357,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_IPI_ALIQUOTA
      *
-     * @param  float  $document_product_ipi_aliquota
+     * @param float $document_product_ipi_aliquota
      */
     public function setDocumentProductIpiAliquota(float $document_product_ipi_aliquota)
     {
@@ -365,7 +367,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_PIS_ALIQUOTA
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductPisAliquota()
     {
@@ -375,7 +377,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_PIS_ALIQUOTA
      *
-     * @param  float  $document_product_pis_aliquota
+     * @param float $document_product_pis_aliquota
      */
     public function setDocumentProductPisAliquota(float $document_product_pis_aliquota)
     {
@@ -385,7 +387,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_COFINS_CST
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductCofinsCst()
     {
@@ -395,7 +397,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_COFINS_CST
      *
-     * @param  float  $document_product_cofins_cst
+     * @param float $document_product_cofins_cst
      */
     public function setDocumentProductCofinsCst(float $document_product_cofins_cst)
     {
@@ -405,7 +407,7 @@ class ProductItem extends Resource
     /**
      * Get the value of DOCUMENT_PRODUCT_COFINS_ALIQUOTA
      *
-     * @return  float
+     * @return float
      */
     public function getDocumentProductCofinsAliquota()
     {
@@ -415,7 +417,7 @@ class ProductItem extends Resource
     /**
      * Set the value of DOCUMENT_PRODUCT_COFINS_ALIQUOTA
      *
-     * @param  float  $document_product_cofins_aliquota
+     * @param float $document_product_cofins_aliquota
      */
     public function setDocumentProductCofinsAliquota(float $document_product_cofins_aliquota)
     {

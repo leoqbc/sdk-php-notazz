@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\DSL\Tools;
+<?php
+
+namespace Multiverse\Notazz\DSL\Tools;
 
 class Formatter
 {

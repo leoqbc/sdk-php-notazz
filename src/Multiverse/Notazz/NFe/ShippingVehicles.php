@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFe;
+<?php
+
+namespace Multiverse\Notazz\NFe;
 
 use Multiverse\Notazz\Resource;
 
@@ -16,7 +18,7 @@ class ShippingVehicles extends Resource
     /**
      * Get the value of document_frete_veiculo_placa
      */
-    public function getDocumentFreteVeiculoPlaca() : string
+    public function getDocumentFreteVeiculoPlaca(): string
     {
         return $this->document_frete_veiculo_placa;
     }
@@ -32,7 +34,7 @@ class ShippingVehicles extends Resource
     /**
      * Get the value of document_frete_veiculo_uf
      */
-    public function getDocumentFreteVeiculoUf() : string
+    public function getDocumentFreteVeiculoUf(): string
     {
         return $this->document_frete_veiculo_uf;
     }

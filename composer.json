@@ -23,6 +23,8 @@
         "squizlabs/php_codesniffer": "^3.4"
     },
     "scripts": {
-        "test": "phpunit tests"
+        "test": "phpunit tests",
+        "check-standards": "phpcs --colors --standard=PSR12 src",
+        "fix-standards": "phpcbf --colors --standard=PSR12 src"
     }
 }

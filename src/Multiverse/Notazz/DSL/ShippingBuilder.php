@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\DSL;
+<?php
+
+namespace Multiverse\Notazz\DSL;
 
 use Multiverse\Notazz\NFe\Shipping;
 use Multiverse\Notazz\DSL\ShippingCarrierBuilder;
@@ -19,11 +21,11 @@ class ShippingBuilder
 
     public function __construct()
     {
-        $this->shipping = new Shipping;
+        $this->shipping = new Shipping();
 
-        $this->shippingCarrierBuilder= new ShippingCarrierBuilder;
-        $this->shippingVehiclesBuilder = new ShippingVehiclesBuilder;
-        $this->shippingVolumesBuilder= new ShippingVolumesBuilder;
+        $this->shippingCarrierBuilder = new ShippingCarrierBuilder();
+        $this->shippingVehiclesBuilder = new ShippingVehiclesBuilder();
+        $this->shippingVolumesBuilder = new ShippingVolumesBuilder();
     }
 
     public function __call($method, $args)

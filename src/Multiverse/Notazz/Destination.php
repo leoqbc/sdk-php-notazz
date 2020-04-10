@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz;
+<?php
+
+namespace Multiverse\Notazz;
 
 class Destination extends Resource
 {

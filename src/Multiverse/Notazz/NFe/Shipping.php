@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFe;
+<?php
+
+namespace Multiverse\Notazz\NFe;
 
 class Shipping
 {
@@ -38,9 +40,9 @@ class Shipping
     /**
      * Get the value of document_frete_mod
      *
-     * @return  int
+     * @return int
      */
-    public function getDocumentFreteMod() : int
+    public function getDocumentFreteMod(): int
     {
         return $this->document_frete_mod;
     }
@@ -51,8 +53,7 @@ class Shipping
      * 2 = Por conta de terceiros
      * 9 = Sem frete
      *
-     * @param  int  $document_frete_mod
-
+     * @param int $document_frete_mod
      */
     public function setDocumentFreteMod(int $document_frete_mod)
     {
@@ -62,9 +63,9 @@ class Shipping
     /**
      * Get the value of document_frete_value
      *
-     * @return  float
+     * @return float
      */
-    public function getDocumentFreteValue() : float
+    public function getDocumentFreteValue(): float
     {
         return $this->document_frete_value;
     }
@@ -72,7 +73,7 @@ class Shipping
     /**
      * Set the value of document_frete_value
      *
-     * @param  float  $document_frete_value
+     * @param float $document_frete_value
      */
     public function setDocumentFreteValue(float $document_frete_value)
     {
@@ -82,9 +83,9 @@ class Shipping
     /**
      * Get the value of document_frete_transportadora
      *
-     * @return  array
+     * @return array
      */
-    public function getDocumentFreteTransportadora() : array
+    public function getDocumentFreteTransportadora(): array
     {
         return $this->document_frete_transportadora;
     }
@@ -92,7 +93,7 @@ class Shipping
     /**
      * Set the value of document_frete_transportadora
      *
-     * @param  array  $document_frete_transportadora
+     * @param array $document_frete_transportadora
      */
     public function setDocumentFreteTransportadora(ShippingCarrier $document_frete_transportadora)
     {
@@ -102,9 +103,9 @@ class Shipping
     /**
      * Get the value of document_frete_veiculo
      *
-     * @return  array
+     * @return array
      */
-    public function getDocumentFreteVeiculo() : array
+    public function getDocumentFreteVeiculo(): array
     {
         return $this->document_frete_veiculo;
     }
@@ -112,7 +113,7 @@ class Shipping
     /**
      * Set the value of document_frete_veiculo
      *
-     * @param  array  $document_frete_veiculo
+     * @param array $document_frete_veiculo
      */
     public function setDocumentFreteVeiculo(ShippingVehicles $document_frete_veiculo)
     {
@@ -122,9 +123,9 @@ class Shipping
     /**
      * Get the value of document_frete_volumes
      *
-     * @return  array
+     * @return array
      */
-    public function getDocumentFreteVolumes() : array
+    public function getDocumentFreteVolumes(): array
     {
         return $this->document_frete_volumes;
     }
@@ -132,7 +133,7 @@ class Shipping
     /**
      * Set the value of document_frete_volumes
      *
-     * @param  array  $document_frete_volumes
+     * @param array $document_frete_volumes
      */
     public function setDocumentFreteVolumes(ShippingVolumes $document_frete_volumes)
     {

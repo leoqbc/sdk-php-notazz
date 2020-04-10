@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFSe;
+<?php
+
+namespace Multiverse\Notazz\NFSe;
 
 use Multiverse\Notazz\Resource;
 
@@ -28,7 +30,7 @@ class Service extends Resource
     /**
      * getThe value of service_list_lc116
      *
-     * @return  int
+     * @return int
      */
     public function getServiceListLc116()
     {
@@ -39,7 +41,7 @@ class Service extends Resource
      * Item da Lista de Serviço da lc 116.
      * Ex: 17.06
      *
-     * @param  int  $service_list_lc116
+     * @param int $service_list_lc116
      */
     public function setServiceListLc116(float $service_list_lc116)
     {
@@ -49,7 +51,7 @@ class Service extends Resource
     /**
      * Get The value of withheld_iss
      *
-     * @return  int
+     * @return int
      */
     public function getWithheldIss()
     {
@@ -59,7 +61,7 @@ class Service extends Resource
     /**
      * ISS retido na fonte. 1 = Retido e 0 = Não retido.
      *
-     * @param  int  $withheld_iss
+     * @param int $withheld_iss
      */
     public function setWithheldIss(int $withheld_iss)
     {
@@ -69,7 +71,7 @@ class Service extends Resource
     /**
      * getThe value of city_service_code
      *
-     * @return  int
+     * @return int
      */
     public function getCityServiceCode()
     {
@@ -79,7 +81,7 @@ class Service extends Resource
     /**
      * Código de serviço do município
      *
-     * @param  int  $city_service_code
+     * @param int $city_service_code
      */
     public function setCityServiceCode(int $city_service_code)
     {
@@ -89,7 +91,7 @@ class Service extends Resource
     /**
      * getThe value of city_service_description
      *
-     * @return  string
+     * @return string
      */
     public function getCityServiceDescription()
     {
@@ -99,7 +101,7 @@ class Service extends Resource
     /**
      * Descrição do serviço do município
      *
-     * @param  string  $city_service_description
+     * @param string $city_service_description
      */
     public function setCityServiceDescription(string $city_service_description)
     {
@@ -109,7 +111,7 @@ class Service extends Resource
     /**
      * getThe value of aliquotas
      *
-     * @return  array
+     * @return array
      */
     public function getAliquotas()
     {
@@ -119,7 +121,7 @@ class Service extends Resource
     /**
      * Set the value of aliquotas
      *
-     * @param  array  $aliquotas
+     * @param array $aliquotas
      */
     public function setAliquotas(Aliquotas $aliquotas)
     {

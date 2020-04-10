@@ -1,4 +1,6 @@
-<?php namespace Multiverse\Notazz\NFe;
+<?php
+
+namespace Multiverse\Notazz\NFe;
 
 use Multiverse\Notazz\Resource;
 
@@ -24,9 +26,9 @@ class ShippingVolumes extends Resource
     /**
      * Get the value of document_frete_volumes_qtd
      *
-     * @return  int
+     * @return int
      */
-    public function getDocumentFreteVolumesQtd() : int
+    public function getDocumentFreteVolumesQtd(): int
     {
         return $this->document_frete_volumes_qtd;
     }
@@ -34,7 +36,7 @@ class ShippingVolumes extends Resource
     /**
      * Quantidade de volumes
      *
-     * @param  int  $document_frete_volumes_qtd
+     * @param int $document_frete_volumes_qtd
      */
     public function setDocumentFreteVolumesQtd(int $document_frete_volumes_qtd)
     {
@@ -44,9 +46,9 @@ class ShippingVolumes extends Resource
     /**
      * Get the value of document_frete_volumes_species
      *
-     * @return  string
+     * @return string
      */
-    public function getDocumentFreteVolumesSpecies() : string
+    public function getDocumentFreteVolumesSpecies(): string
     {
         return $this->document_frete_volumes_species;
     }
@@ -54,7 +56,7 @@ class ShippingVolumes extends Resource
     /**
      * Espécie dos volumes. Ex.: CAIXA, FARDO
      *
-     * @param  string  $document_frete_volumes_species
+     * @param string $document_frete_volumes_species
      */
     public function setDocumentFreteVolumesSpecies(string $document_frete_volumes_species)
     {
@@ -64,9 +66,9 @@ class ShippingVolumes extends Resource
     /**
      * Get the value of document_frete_volumes_net_weight
      *
-     * @return  float
+     * @return float
      */
-    public function getDocumentFreteVolumesNetWeight() : float
+    public function getDocumentFreteVolumesNetWeight(): float
     {
         return $this->document_frete_volumes_net_weight;
     }
@@ -74,7 +76,7 @@ class ShippingVolumes extends Resource
     /**
      * Peso líquido em KG
      *
-     * @param  float  $document_frete_volumes_net_weight
+     * @param float $document_frete_volumes_net_weight
      */
     public function setDocumentFreteVolumesNetWeight(float $document_frete_volumes_net_weight)
     {
@@ -84,9 +86,9 @@ class ShippingVolumes extends Resource
     /**
      * Get the value of document_frete_volumes_gross_weight
      *
-     * @return  float
+     * @return float
      */
-    public function getDocumentFreteVolumesGrossWeight() : float
+    public function getDocumentFreteVolumesGrossWeight(): float
     {
         return $this->document_frete_volumes_gross_weight;
     }
@@ -94,8 +96,7 @@ class ShippingVolumes extends Resource
     /**
      * Peso bruto em KG
      *
-     * @param  float  $document_frete_volumes_gross_weight
-     *
+     * @param float $document_frete_volumes_gross_weight
      */
     public function setDocumentFreteVolumesGrossWeight(float $document_frete_volumes_gross_weight)
     {
