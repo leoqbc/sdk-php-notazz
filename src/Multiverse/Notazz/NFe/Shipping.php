@@ -143,7 +143,7 @@ class Shipping
     public function toArray()
     {
         $array = [];
-        
+
         foreach ($this as $key => $value) {
             if ($value === null) {
                 continue;
@@ -155,7 +155,7 @@ class Shipping
         }
 
         $this->document_frete['DOCUMENT_FRETE'] = $array;
-        
+
         return $this->document_frete;
     }
 }

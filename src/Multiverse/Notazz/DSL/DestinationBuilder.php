@@ -19,11 +19,11 @@ class DestinationBuilder
     {
         $this->destination = new Destination();
     }
-    
+
     public function __call(string $method, array $args)
     {
         $method = ucfirst(Formatter::snakeToCamel($method));
-        
+
         $method = "setDestination$method";
 
         if (false === method_exists($this->destination, $method)) {

@@ -1,9 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
 use Multiverse\Notazz\DSL\NotaFiscalBuilder;
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
@@ -12,9 +10,9 @@ class NotaFiscalNFeTest extends TestCase
 {
     protected $notafiscal;
 
-    public function setUp() : void
+    public function setUp(): void
     {
-        $client = new GuzzleHttp\Client;
+        $client = new GuzzleHttp\Client();
 
         $this->notafiscal = new NotaFiscalBuilder($client);
     }
@@ -24,7 +22,7 @@ class NotaFiscalNFeTest extends TestCase
         $client = $this->createMock(Client::class);
 
         $response = $this->createMock(Response::class);
-        
+
         $stream = $this->createMock(Stream::class);
 
         $client->method('request')
@@ -83,7 +81,7 @@ class NotaFiscalNFeTest extends TestCase
         $client = $this->createMock(Client::class);
 
         $response = $this->createMock(Response::class);
-        
+
         $stream = $this->createMock(Stream::class);
 
         $client->method('request')
@@ -151,8 +149,8 @@ class NotaFiscalNFeTest extends TestCase
                         ->number(123)
                         ->district('Centro')
                         ->city('Belo Horizonte')
-                        ->uf('MG')    
-                ->save()       
+                        ->uf('MG')
+                ->save()
             ->make()
         ;
 
@@ -223,5 +221,4 @@ JSON;
             $result
         );
     }
-} 
-
+}

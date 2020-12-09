@@ -31,9 +31,9 @@ class ShippingBuilder
     public function __call($method, $args)
     {
         $arg = $args[0] ?? null;
-        
+
         $target = $this->current;
-        
+
         $this->$target->$method($arg);
 
         return $this;

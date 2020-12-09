@@ -44,7 +44,7 @@ class DocumentBuilder
     public function __call(string $method, array $args)
     {
         $method = ucfirst(Formatter::snakeToCamel($method));
-        
+
         $method = "setDocument$method";
 
         if (false === method_exists($this->document, $method)) {

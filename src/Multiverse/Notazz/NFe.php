@@ -75,7 +75,7 @@ class NFe
         }
 
         $frete = $this->shipping->toArray();
-        
+
         if (count($frete['DOCUMENT_FRETE']) === 0) {
             return false;
         }

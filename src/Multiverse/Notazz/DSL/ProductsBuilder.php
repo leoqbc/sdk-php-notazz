@@ -14,7 +14,7 @@ class ProductsBuilder
     protected $productItem;
 
     protected $adding;
-    
+
     public function __construct()
     {
         $this->products = new Products();
@@ -25,7 +25,7 @@ class ProductsBuilder
         $this->productItem = $this->makeProductItemInstance();
 
         $method = ucfirst(Formatter::snakeToCamel($method));
-        
+
         $method = "setDocumentProduct$method";
 
         if (false === method_exists($this->productItem, $method)) {
