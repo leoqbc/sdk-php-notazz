@@ -4,6 +4,8 @@
 [![Total Downloads](https://poser.pugx.org/multiverse/notazzsdk/downloads)](https://packagist.org/packages/multiverse/notazzsdk)
 [![License](https://poser.pugx.org/multiverse/notazzsdk/license)](https://packagist.org/packages/multiverse/notazzsdk)
 
+[Documentação da API oficial](https://app.notazz.com/docs/api/)
+
 SDK e DSL em PHP para emissão de nota fiscal NFE e NFSE
 
 ### Intalação da SDK
@@ -125,4 +127,5 @@ $result = $this->notafiscal
 ```
 # Obs:
 No momento só foi implementado emissão de notafiscal NF-e / NFS-e
+TODO: Criar consulta a notas por código e filtros
 
