@@ -33,7 +33,7 @@ class Document extends Resource
         $this->setDocumentIssueDate($currentDate);
         $this->setDocumentCompetence($currentDate);
     }
-    
+
     /**
      * Get the value of DOCUMENT_BASEVALUE
      *

@@ -76,7 +76,7 @@ class NotaFiscal
             if ($result->statusProcessamento === 'erro') {
                 throw new ErrorStatusProcessamentoException("Error when generating the invoice: $result->motivo", 400);
             }
-            
+
             return $result;
         } catch (\Exception $e) {
             throw $e;

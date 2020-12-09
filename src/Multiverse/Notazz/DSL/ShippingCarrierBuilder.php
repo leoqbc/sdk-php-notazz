@@ -14,11 +14,11 @@ class ShippingCarrierBuilder
     {
         $this->shippingCarrier = new ShippingCarrier();
     }
-    
+
     public function __call(string $method, array $args)
     {
         $method = ucfirst(Formatter::snakeToCamel($method));
-        
+
         $method = "setDocumentFreteTransportadora$method";
 
         if (false === method_exists($this->shippingCarrier, $method)) {

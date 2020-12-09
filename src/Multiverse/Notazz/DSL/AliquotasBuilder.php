@@ -9,7 +9,7 @@ use Multiverse\Notazz\DSL\Tools\Formatter;
 class AliquotasBuilder
 {
     protected $aliquotas;
-    
+
     public function __construct()
     {
         $this->aliquotas = new Aliquotas();
