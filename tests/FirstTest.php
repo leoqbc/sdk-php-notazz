@@ -1,10 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
 use Multiverse\Notazz\DSL\Exceptions\MethodNotFoundException;
 use Multiverse\Notazz\DSL\Exceptions\CantAddEmailException;
-
 use Multiverse\Notazz\DSL\DestinationBuilder;
 use Multiverse\Notazz\DSL\DocumentBuilder;
 use Multiverse\Notazz\DSL\ProductsBuilder;
@@ -16,7 +14,8 @@ use Multiverse\Notazz\DSL\ShippingVehiclesBuilder;
 use Multiverse\Notazz\DSL\ShippingCarrierBuilder;
 
 class FirstTest extends TestCase
-{ 
+{
+
     public function testDSLClassDestinationBuilder()
     {
         $destination = new DestinationBuilder();
@@ -101,7 +100,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentBuilderIsNFSE()
     {
-        $document = new DocumentBuilder;
+        $document = new DocumentBuilder();
 
         $document
             ->nfse()
@@ -117,7 +116,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentBuilderIsNFE()
     {
-        $document = new DocumentBuilder;
+        $document = new DocumentBuilder();
 
         $document
             ->nfe()
@@ -133,7 +132,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentClassCouldBeFullFilledNFSE()
     {
-        $document = (new DocumentBuilder)
+        $document = (new DocumentBuilder())
             ->nfse()
                 ->basevalue(1.00)
                 ->description('Descrição teste')
@@ -155,7 +154,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentClassCouldBeFullFilledNFE()
     {
-        $document = (new DocumentBuilder)
+        $document = (new DocumentBuilder())
             ->nfe()
                 ->basevalue(1.00)
                 ->description('Descrição teste')
@@ -175,7 +174,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentClassShouldBeNFE()
     {
-        $document = (new DocumentBuilder)
+        $document = (new DocumentBuilder())
             ->nfe()
                 ->basevalue(1.00)
                 ->description('Descrição teste')
@@ -187,7 +186,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentClassCouldBeNFSE()
     {
-        $document = (new DocumentBuilder)
+        $document = (new DocumentBuilder())
             ->nfse()
                 ->basevalue(1.00)
                 ->description('Descrição teste')
@@ -202,7 +201,7 @@ class FirstTest extends TestCase
 
     public function testDSLDocumentBuilderProduct()
     {
-        $products = (new ProductsBuilder)
+        $products = (new ProductsBuilder())
             ->add()
                 ->cod(123)
                 ->name('Escova de dentes Cepacol')
@@ -243,7 +242,7 @@ class FirstTest extends TestCase
 
     public function testDSLAliquotasClassCouldBeFullFilledNFSE()
     {
-        $aliquotas = new AliquotasBuilder;
+        $aliquotas = new AliquotasBuilder();
 
         $aliquotas
             ->cofins(1.0)
@@ -268,7 +267,7 @@ class FirstTest extends TestCase
 
     public function testDSLServiceClassCouldBeFullFilledNFSE()
     {
-        $service = new ServiceBuilder;
+        $service = new ServiceBuilder();
 
         $service
             ->description('Teste')
@@ -302,10 +301,10 @@ class FirstTest extends TestCase
 
         $this->assertEquals($result, $service->getArray());
     }
-  
+
     public function testDSLShippingVehiclesClassCouldBeFullFilledNFSE()
     {
-        $shippingVehicles = new ShippingVehiclesBuilder;
+        $shippingVehicles = new ShippingVehiclesBuilder();
 
         $result = [
             "DOCUMENT_FRETE_VEICULO_PLACA" => "ZZZ1100",
@@ -322,7 +321,7 @@ class FirstTest extends TestCase
 
     public function testDSLShippingVolumesClassCouldBeFullFilledNFSE()
     {
-        $shippingVolumes = new ShippingVolumesBuilder;
+        $shippingVolumes = new ShippingVolumesBuilder();
 
         $result = [
             "DOCUMENT_FRETE_VOLUMES_QTD" => "1",
@@ -343,7 +342,7 @@ class FirstTest extends TestCase
 
     public function testDSLShippingCarrierClassCouldBeFullFilledNFSE()
     {
-        $shippingCarrier = new ShippingCarrierBuilder;
+        $shippingCarrier = new ShippingCarrierBuilder();
 
         $result = [
             "DOCUMENT_FRETE_TRANSPORTADORA_NAME" => "Empresa Brasileira de Correios e Telégrafos",
@@ -372,7 +371,7 @@ class FirstTest extends TestCase
 
     public function testDSLShippingClassCouldBeFullFilledNFSE()
     {
-        $shipping = new ShippingBuilder;
+        $shipping = new ShippingBuilder();
 
         $result = [
             "DOCUMENT_FRETE" => [
@@ -420,9 +419,9 @@ class FirstTest extends TestCase
                 ->number(123)
                 ->district('Centro')
                 ->city('Belo Horizonte')
-                ->uf('MG')    
+                ->uf('MG')
         ->save();
-        
+
         $this->assertEquals($result, $shipping->getArray());
     }
 }

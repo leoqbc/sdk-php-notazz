@@ -42,7 +42,7 @@ class Document extends Resource
     public function __construct()
     {
         $date = date('Y-m-d H:i:s', strtotime('+30 days'));
-        
+
         $this->setDocumentIssueDate($date);
     }
 

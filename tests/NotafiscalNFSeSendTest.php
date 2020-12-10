@@ -1,9 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
 use Multiverse\Notazz\DSL\NotaFiscalBuilder;
-
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Stream;
@@ -15,7 +13,7 @@ class NotaFiscalNFSeSendTest extends TestCase
 
     protected $apiKey;
 
-    public function setUp() : void
+    public function setUp(): void
     {
         $this->apiKey = '123';
 
@@ -27,7 +25,7 @@ class NotaFiscalNFSeSendTest extends TestCase
         $client = $this->createMock(Client::class);
 
         $response = $this->createMock(Response::class);
-        
+
         $stream = $this->createMock(Stream::class);
 
         $client->method('request')
@@ -39,7 +37,7 @@ class NotaFiscalNFSeSendTest extends TestCase
         $stream->method('getContents')
                 ->willReturn('{"statusProcessamento":"sucesso","codigoProcessamento":"000","id":"123"}');
 
-        $result = 
+        $result =
             $this->notafiscal
                 ->setRequestHandler($client)
                 ->key('123')
@@ -80,7 +78,7 @@ class NotaFiscalNFSeSendTest extends TestCase
             ->make()
         ;
 
-        $expectedResult = new \stdClass;
+        $expectedResult = new \stdClass();
 
         $expectedResult->statusProcessamento = 'sucesso';
         $expectedResult->codigoProcessamento = '000';
@@ -96,7 +94,7 @@ class NotaFiscalNFSeSendTest extends TestCase
         $client = $this->createMock(Client::class);
 
         $response = $this->createMock(Response::class);
-        
+
         $stream = $this->createMock(Stream::class);
 
         $client->method('request')

@@ -14,11 +14,11 @@ class ShippingVolumesBuilder
     {
         $this->shippingVolumes = new ShippingVolumes();
     }
-    
+
     public function __call(string $method, array $args)
     {
         $method = ucfirst(Formatter::snakeToCamel($method));
-        
+
         $method = "setDocumentFreteVolumes$method";
 
         if (false === method_exists($this->shippingVolumes, $method)) {

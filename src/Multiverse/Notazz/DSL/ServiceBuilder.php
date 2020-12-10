@@ -17,7 +17,7 @@ class ServiceBuilder
         $this->service = new Service();
         $this->aliquotasBuilder = new AliquotasBuilder();
     }
-    
+
     public function __call(string $method, array $args)
     {
         $arg = $args[0] ?? null;

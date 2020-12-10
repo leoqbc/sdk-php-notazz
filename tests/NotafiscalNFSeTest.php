@@ -1,16 +1,15 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
 use Multiverse\Notazz\DSL\NotaFiscalBuilder;
 
 class NotaFiscalNFSeTest extends TestCase
 {
     protected $notafiscal;
 
-    public function setUp() : void
+    public function setUp(): void
     {
-        $client = new GuzzleHttp\Client;
+        $client = new GuzzleHttp\Client();
 
         $this->notafiscal = new NotaFiscalBuilder($client);
     }

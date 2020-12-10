@@ -2,7 +2,6 @@ dist: trusty
 language: php
 
 php:
-  - 7.1
   - 7.2
   - 7.3
   - 7.4
@@ -22,10 +21,3 @@ before_script:
 script:
   - vendor/bin/phpcs --standard=psr12 src/
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
-
-after_script:
-  - |
-    if [[ "$TRAVIS_PHP_VERSION" != 'hhvm' ]]; then
-      wget https://scrutinizer-ci.com/ocular.phar
-      php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-    fi
