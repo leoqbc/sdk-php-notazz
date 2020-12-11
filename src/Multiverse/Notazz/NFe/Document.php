@@ -39,6 +39,10 @@ class Document extends Resource
      */
     protected $document_issue_date;
 
+    protected $logistics;
+
+    protected $external_id;
+
     public function __construct()
     {
         $date = date('Y-m-d H:i:s', strtotime('+30 days'));
@@ -208,4 +212,15 @@ class Document extends Resource
     {
         $this->document_issue_date = $document_issue_date;
     }
+
+    public function setDocumentLogistics(string $logistics)
+    {
+        $this->logistics = $logistics;
+    }
+
+    public function setDocumentExternalId(string $external_id)
+    {
+        $this->external_id = $external_id;
+    }
 }
+
